@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<script>
+(function(){
+  var l = localStorage.getItem('sf_lang') || 'ar';
+  document.documentElement.setAttribute('lang', l);
+  document.documentElement.setAttribute('dir', l==='fr' ? 'ltr' : 'rtl');
+})();
+</script>
+<title>كاتالوغ منتجات Forever</title>
+<meta name="description" content="كاتالوغ تفاعلي لمنتجات فوريفر ليفينغ - تصفح، ابحث، واطلب بسهولة">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#0f3d24;
+    --green-800:#155c34;
+    --green-700:#1c7a44;
+    --green-600:#239157;
+    --green-100:#e7f5ec;
+    --gold-500:#f2a93b;
+    --gold-600:#e8940f;
+    --ink:#1a2420;
+    --muted:#6b7d74;
+    --bg:#f6f8f6;
+    --card:#ffffff;
+    --border:#e3e9e4;
+    --shadow: 0 2px 10px rgba(15,61,36,.08);
+    --shadow-lg: 0 12px 40px rgba(15,61,36,.22);
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Cairo',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  button{font-family:inherit}
+
+  /* ---------- Header ---------- */
+  header.topbar{
+    position:sticky; top:0; z-index:40;
+    background:linear-gradient(135deg,var(--green-800),var(--green-700));
+    color:#fff;
+    box-shadow:var(--shadow);
+  }
+  .topbar-inner{
+    max-width:1280px; margin:0 auto;
+    padding:12px 16px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-weight:800; font-size:20px; white-space:nowrap;
+  }
+  .brand .leaf{
+    width:34px;height:34px;border-radius:10px;
+    background:var(--gold-500);
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;
+  }
+  .brand small{display:block;font-weight:400;font-size:11px;opacity:.85}
+  .menu-btn{
+    display:none;
+    background:rgba(255,255,255,.12); border:none; color:#fff;
+    width:40px;height:40px;border-radius:10px; font-size:18px; cursor:pointer;
+    flex-shrink:0;
+  }
+  .search-wrap{
+    flex:1; position:relative; max-width:640px;
+  }
+  .search-wrap input{
+    width:100%; padding:12px 44px 12px 16px;
+    border-radius:999px; border:none; outline:none;
+    font-family:inherit; font-size:15px;
+    background:#fff; color:var(--ink);
+  }
+  .search-wrap .icon{
+    position:absolute; right:16px; top:50%; transform:translateY(-50%);
+    opacity:.5; pointer-events:none;
+  }
+  .search-wrap .clear-btn{
+    position:absolute; left:10px; top:50%; transform:translateY(-50%);
+    background:var(--border); border:none; border-radius:50%;
+    width:24px;height:24px; cursor:pointer; color:var(--muted); font-size:13px;
+    display:none;
+  }
+  .whatsapp-fab-inline{
+    display:flex; align-items:center; gap:8px;
+    background:var(--gold-500); color:#1a2420; font-weight:700;
+    padding:10px 16px; border-radius:999px; text-decoration:none;
+    white-space:nowrap; font-size:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,.15);
+  }
+  .lang-toggle{
+    background:rgba(255,255,255,.14); color:#fff; border:1px solid rgba(255,255,255,.35);
+    border-radius:999px; padding:9px 14px; font-weight:700; font-size:13px;
+    cursor:pointer; white-space:nowrap; flex-shrink:0;
+  }
+  .lang-toggle:hover{background:rgba(255,255,255,.24)}
+  @media (max-width:760px){
+    .whatsapp-fab-inline span.txt{display:none}
+    .whatsapp-fab-inline{padding:10px 12px}
+    .menu-btn{display:flex; align-items:center; justify-content:center}
+  }
+
+  /* ---------- Layout ---------- */
+  .layout{
+    max-width:1280px; margin:0 auto;
+    display:grid; grid-template-columns:240px 1fr; gap:22px;
+    padding:20px 16px 60px;
+  }
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr}
+  }
+
+  /* ---------- Sidebar ---------- */
+  aside.sidebar{
+    position:sticky; top:78px; align-self:start;
+    background:var(--card); border:1px solid var(--border);
+    border-radius:var(--radius); padding:14px;
+    max-height:calc(100vh - 100px); overflow:auto;
+  }
+  @media (max-width:900px){
+    aside.sidebar{
+      position:fixed; inset:0 0 0 auto; width:min(84vw,340px);
+      max-height:100vh; border-radius:0; z-index:60;
+      transform:translateX(100%); transition:transform .25s ease;
+      box-shadow:var(--shadow-lg);
+    }
+    aside.sidebar.open{transform:translateX(0) !important}
+    .backdrop{
+      display:none; position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:55;
+    }
+    body.menu-open .backdrop{display:block}
+  }
+  .sidebar h3{margin:2px 6px 10px; font-size:13px; color:var(--muted); font-weight:700}
+  .cat-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:4px}
+  .cat-item{
+    display:flex; align-items:center; justify-content:space-between; gap:8px;
+    padding:11px 12px; border-radius:10px; cursor:pointer;
+    font-size:14.5px; font-weight:600; color:var(--ink);
+    border:1px solid transparent;
+  }
+  .cat-item:hover{background:var(--green-100)}
+  .cat-item.active{background:var(--green-700); color:#fff}
+  .cat-item .count{
+    font-size:11px; font-weight:700; opacity:.75;
+    background:rgba(0,0,0,.06); padding:2px 8px; border-radius:999px;
+  }
+  .cat-item.active .count{background:rgba(255,255,255,.22)}
+  .sidebar-close{
+    display:none; background:var(--border); border:none; border-radius:10px;
+    padding:8px 12px; margin-bottom:12px; font-weight:700; cursor:pointer; width:100%;
+  }
+  @media (max-width:900px){.sidebar-close{display:block}}
+
+  /* ---------- Main ---------- */
+  main{min-width:0}
+  .toolbar{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    margin-bottom:14px; flex-wrap:wrap;
+  }
+  .toolbar h2{margin:0; font-size:19px}
+  .toolbar .result-count{font-size:13px; color:var(--muted); font-weight:600}
+  select#sortSelect{
+    border:1px solid var(--border); border-radius:10px; padding:9px 12px;
+    background:#fff; font-family:inherit; font-size:13.5px; color:var(--ink); cursor:pointer;
+  }
+  /* ---------- Hero Slider ---------- */
+  .hero-wrap{max-width:1280px; margin:16px auto 0; padding:0 16px}
+  .hero-slider{
+    position:relative; border-radius:var(--radius); overflow:hidden;
+    height:520px; background:var(--green-800); box-shadow:var(--shadow);
+  }
+  @media (max-width:760px){.hero-slider{height:360px}}
+  .hero-track{display:flex; height:100%; transition:transform .5s ease; direction:ltr}
+  .hero-slide{
+    flex:0 0 100%; height:100%; position:relative; cursor:pointer; overflow:hidden;
+  }
+  .hero-slide .bg{
+    position:absolute; inset:-20px; background-size:cover; background-position:center;
+    filter:blur(35px) brightness(.55); transform:scale(1.15);
+  }
+  .hero-slide img{position:relative; width:100%; height:100%; object-fit:contain; z-index:1}
+  .hero-slide .cap{
+    position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; justify-content:flex-end;
+    padding:20px 24px; background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 40%);
+    pointer-events:none;
+  }
+  .hero-slide .cap span{color:#fff; font-weight:800; font-size:24px}
+  @media (max-width:760px){.hero-slide .cap span{font-size:17px}}
+  .hero-slide .cap small{color:#e7f5ec; font-size:13px; margin-top:4px}
+  .hero-arrow{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:5;
+    background:rgba(0,0,0,.35); color:#fff; border:none; border-radius:50%;
+    width:38px; height:38px; font-size:18px; cursor:pointer;
+  }
+  .hero-arrow:hover{background:rgba(0,0,0,.55)}
+  .hero-arrow.prev{inset-inline-start:12px}
+  .hero-arrow.next{inset-inline-end:12px}
+  .hero-dots{
+    position:absolute; bottom:12px; left:0; right:0; z-index:5;
+    display:flex; justify-content:center; gap:6px;
+  }
+  .hero-dots button{
+    width:8px; height:8px; border-radius:50%; border:none; padding:0;
+    background:rgba(255,255,255,.5); cursor:pointer;
+  }
+  .hero-dots button.active{background:#fff; width:20px; border-radius:5px}
+
+  .category-banner{
+    position:relative; border-radius:var(--radius); overflow:hidden;
+    margin-bottom:16px; height:130px; background:var(--green-800);
+  }
+  .category-banner img{width:100%;height:100%;object-fit:cover; opacity:.85}
+  .category-banner .cap{
+    position:absolute; inset:0; display:flex; align-items:flex-end;
+    padding:16px; background:linear-gradient(0deg,rgba(0,0,0,.55),transparent 70%);
+  }
+  .category-banner .cap span{color:#fff; font-weight:800; font-size:22px}
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(168px,1fr));
+    gap:14px;
+  }
+  .card{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    overflow:hidden; cursor:pointer; display:flex; flex-direction:column;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .card:hover{transform:translateY(-3px); box-shadow:var(--shadow-lg)}
+  .card .thumb{
+    aspect-ratio:1/1; background:#eef2ee; position:relative; overflow:hidden;
+  }
+  .card .thumb img{width:100%;height:100%;object-fit:cover}
+  .card .bundle-badge{
+    position:absolute; top:8px; right:8px;
+    background:var(--gold-500); color:#1a2420; font-weight:800; font-size:10.5px;
+    padding:3px 9px; border-radius:999px;
+  }
+  .card .body{padding:10px 12px 12px; display:flex; flex-direction:column; gap:6px; flex:1}
+  .card .name{
+    font-size:13.5px; font-weight:700; line-height:1.35;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+    min-height:2.7em;
+  }
+  .card .meta{display:flex; align-items:center; justify-content:space-between; margin-top:auto}
+  .card .price{font-weight:800; color:var(--green-800); font-size:14.5px}
+  .card .ref{font-size:10.5px; color:var(--muted)}
+
+  .empty-state{
+    text-align:center; padding:70px 20px; color:var(--muted);
+  }
+  .empty-state .big{font-size:40px; margin-bottom:10px}
+
+  /* ---------- Modal ---------- */
+  .modal-backdrop{
+    display:none; position:fixed; inset:0; background:rgba(10,20,14,.65);
+    z-index:80; align-items:center; justify-content:center; padding:16px;
+  }
+  .modal-backdrop.open{display:flex}
+  .modal{
+    background:#fff; border-radius:20px; max-width:920px; width:100%;
+    max-height:92vh; overflow:auto; position:relative;
+    display:grid; grid-template-columns:1fr 1fr;
+  }
+  @media (max-width:760px){.modal{grid-template-columns:1fr}}
+  .modal-close{
+    position:absolute; top:12px; left:12px; z-index:5;
+    background:rgba(0,0,0,.55); color:#fff; border:none; border-radius:50%;
+    width:34px;height:34px; font-size:16px; cursor:pointer;
+  }
+  .modal-img{
+    background:#0f3d24; display:flex; align-items:center; justify-content:center;
+    cursor:zoom-in; overflow:hidden; min-height:280px;
+  }
+  .modal-img img{width:100%; height:100%; object-fit:contain; transition:transform .25s ease}
+  .modal-img.zoomed{cursor:zoom-out}
+  .modal-img.zoomed img{transform:scale(1.9)}
+  .modal-info{padding:22px; display:flex; flex-direction:column; gap:12px}
+  .modal-info .cat-pill{
+    align-self:flex-start; background:var(--green-100); color:var(--green-800);
+    font-size:12px; font-weight:700; padding:4px 12px; border-radius:999px;
+  }
+  .modal-info h2{margin:0; font-size:20px; line-height:1.4}
+  .modal-info .ref-line{font-size:12.5px; color:var(--muted)}
+  .modal-info .price-big{font-size:26px; font-weight:800; color:var(--green-800)}
+  .modal-info .tags{display:flex; flex-wrap:wrap; gap:6px}
+  .modal-info .tag{
+    background:var(--bg); border:1px solid var(--border); font-size:12px;
+    padding:5px 10px; border-radius:999px; color:var(--ink);
+  }
+  .modal-info .contents{
+    background:var(--green-100); border-radius:12px; padding:12px 14px; font-size:13.5px;
+  }
+  .modal-info .contents h4{margin:0 0 6px; font-size:13px; color:var(--green-800)}
+  .modal-info .contents ul{margin:0; padding-inline-start:18px; display:flex; flex-direction:column; gap:3px}
+  .modal-actions{display:flex; gap:10px; margin-top:auto; flex-wrap:wrap}
+  .btn{
+    flex:1; text-align:center; padding:13px 14px; border-radius:12px;
+    font-weight:700; font-size:14px; text-decoration:none; cursor:pointer; border:none;
+    display:flex; align-items:center; justify-content:center; gap:6px; min-width:140px;
+  }
+  .btn-whatsapp{background:#25D366; color:#fff}
+  .wa-icon{width:19px; height:19px; flex-shrink:0; fill:currentColor}
+
+  /* ---------- Floating WhatsApp button ---------- */
+  .wa-float{
+    position:fixed; bottom:22px; inset-inline-end:22px; z-index:70;
+    width:58px; height:58px; border-radius:50%;
+    background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,.3); text-decoration:none;
+    animation:wa-pulse 2.4s ease-in-out infinite;
+  }
+  .wa-float:hover{background:#1ebe5b}
+  .wa-float .wa-icon{width:30px; height:30px}
+  @keyframes wa-pulse{
+    0%,100%{box-shadow:0 6px 20px rgba(0,0,0,.3), 0 0 0 0 rgba(37,211,102,.5)}
+    50%{box-shadow:0 6px 20px rgba(0,0,0,.3), 0 0 0 10px rgba(37,211,102,0)}
+  }
+  @media (max-width:760px){
+    .wa-float{width:52px; height:52px; bottom:16px; inset-inline-end:16px}
+    .wa-float .wa-icon{width:27px; height:27px}
+  }
+  .btn-zoom{background:var(--bg); color:var(--ink); border:1px solid var(--border)}
+  .hint{font-size:11.5px; color:var(--muted)}
+
+  footer{
+    background:var(--green-900); color:#dfe9e2; padding:34px 16px;
+    margin-top:20px;
+  }
+  .footer-inner{max-width:1280px; margin:0 auto; display:grid; gap:16px; grid-template-columns:2fr 1fr; }
+  @media (max-width:760px){.footer-inner{grid-template-columns:1fr}}
+  footer h4{margin:0 0 8px; color:#fff}
+  footer p{font-size:13.5px; line-height:1.9; color:#c7d6cc; margin:0}
+  footer .badges-card{
+    background:#fff; border-radius:14px; padding:16px 20px; margin:14px auto 0;
+    display:flex; align-items:center; justify-content:center; width:fit-content; max-width:100%;
+  }
+  footer .badges-card img{height:44px; width:auto; max-width:100%; object-fit:contain}
+  @media (max-width:760px){ footer .badges-card img{height:34px} }
+  .copy{text-align:center; font-size:12px; color:#8fa79a; margin-top:20px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+    <div class="brand">
+      <span class="leaf">🌿</span>
+      <span>كاتالوغ Forever<small>منتجات فوريفر ليفينغ</small></span>
+    </div>
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="ابحث عن منتج، مرجع، أو استخدام (مثال: ضغط الدم، ترطيب...)">
+      <span class="icon">🔍</span>
+      <button class="clear-btn" id="clearBtn">✕</button>
+    </div>
+    <button class="lang-toggle" id="langToggle" type="button">FR</button>
+    <a class="whatsapp-fab-inline" id="headerWhatsapp" href="#" target="_blank" rel="noopener">
+      <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.694 4.61 1.885 6.49L4 29l7.693-1.865A11.94 11.94 0 0 0 16.001 27C22.629 27 28 21.627 28 15S22.629 3 16.001 3zm0 21.818c-1.925 0-3.716-.55-5.24-1.5l-.376-.223-4.564 1.106 1.122-4.448-.245-.396A9.77 9.77 0 0 1 5.182 15c0-5.964 4.855-10.818 10.819-10.818S26.82 9.036 26.82 15 21.965 24.818 16.001 24.818zm5.6-8.15c-.307-.154-1.815-.897-2.097-1-.281-.103-.486-.154-.69.154-.204.307-.79 1-.968 1.205-.178.205-.357.23-.664.077-.307-.154-1.296-.478-2.469-1.523-.913-.814-1.53-1.82-1.71-2.127-.178-.307-.019-.473.135-.626.139-.138.307-.358.46-.537.154-.18.205-.307.307-.512.103-.205.051-.384-.026-.538-.077-.154-.69-1.663-.945-2.277-.249-.598-.502-.517-.69-.527l-.588-.01c-.205 0-.538.077-.82.384-.281.307-1.073 1.049-1.073 2.558s1.098 2.967 1.251 3.172c.154.205 2.16 3.3 5.234 4.627.731.316 1.302.505 1.747.646.734.234 1.402.201 1.931.122.589-.088 1.815-.742 2.07-1.459.256-.717.256-1.332.18-1.459-.077-.128-.282-.205-.589-.359z"/></svg>
+      <span class="txt" id="headerWaText">اطلب عبر واتساب</span>
+    </a>
+  </div>
+</header>
+
+<div class="backdrop" id="backdrop"></div>
+
+<div class="hero-wrap">
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-track" id="heroTrack"></div>
+    <button class="hero-arrow prev" id="heroPrev" aria-label="prev">‹</button>
+    <button class="hero-arrow next" id="heroNext" aria-label="next">›</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar" id="sidebar">
+    <button class="sidebar-close" id="sidebarClose">✕ إغلاق</button>
+    <h3 id="sidebarTitle">الأقسام</h3>
+    <ul class="cat-list" id="catList"></ul>
+  </aside>
+
+  <main>
+    <div id="categoryBanner"></div>
+    <div class="toolbar">
+      <h2 id="sectionTitle">كل المنتجات</h2>
+      <div style="display:flex; align-items:center; gap:10px">
+        <span class="result-count" id="resultCount"></span>
+        <select id="sortSelect">
+          <option value="default" id="optDefault">الترتيب الافتراضي</option>
+          <option value="price_asc" id="optPriceAsc">السعر: من الأقل للأعلى</option>
+          <option value="price_desc" id="optPriceDesc">السعر: من الأعلى للأقل</option>
+          <option value="name" id="optName">الاسم: أ-ي</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="big">🔎</div>
+      <div id="emptyStateText">لم يتم العثور على أي منتج مطابق لبحثك.</div>
+    </div>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modalBox">
+    <button class="modal-close" id="modalClose">✕</button>
+    <div class="modal-img" id="modalImgWrap">
+      <img id="modalImg" src="" alt="">
+    </div>
+    <div class="modal-info">
+      <span class="cat-pill" id="modalCat"></span>
+      <h2 id="modalName"></h2>
+      <div class="ref-line" id="modalRef"></div>
+      <div class="price-big" id="modalPrice"></div>
+      <div class="tags" id="modalTags"></div>
+      <div class="contents" id="modalContents" style="display:none">
+        <h4 id="modalContentsTitle">محتوى الباقة:</h4>
+        <ul id="modalContentsList"></ul>
+      </div>
+      <div class="modal-actions">
+        <a class="btn btn-whatsapp" id="modalWhatsapp" href="#" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.694 4.61 1.885 6.49L4 29l7.693-1.865A11.94 11.94 0 0 0 16.001 27C22.629 27 28 21.627 28 15S22.629 3 16.001 3zm0 21.818c-1.925 0-3.716-.55-5.24-1.5l-.376-.223-4.564 1.106 1.122-4.448-.245-.396A9.77 9.77 0 0 1 5.182 15c0-5.964 4.855-10.818 10.819-10.818S26.82 9.036 26.82 15 21.965 24.818 16.001 24.818zm5.6-8.15c-.307-.154-1.815-.897-2.097-1-.281-.103-.486-.154-.69.154-.204.307-.79 1-.968 1.205-.178.205-.357.23-.664.077-.307-.154-1.296-.478-2.469-1.523-.913-.814-1.53-1.82-1.71-2.127-.178-.307-.019-.473.135-.626.139-.138.307-.358.46-.537.154-.18.205-.307.307-.512.103-.205.051-.384-.026-.538-.077-.154-.69-1.663-.945-2.277-.249-.598-.502-.517-.69-.527l-.588-.01c-.205 0-.538.077-.82.384-.281.307-1.073 1.049-1.073 2.558s1.098 2.967 1.251 3.172c.154.205 2.16 3.3 5.234 4.627.731.316 1.302.505 1.747.646.734.234 1.402.201 1.931.122.589-.088 1.815-.742 2.07-1.459.256-.717.256-1.332.18-1.459-.077-.128-.282-.205-.589-.359z"/></svg>
+          <span id="modalWaText">اطلب عبر واتساب</span>
+        </a>
+      </div>
+      <div class="hint" id="modalHint">اضغط على الصورة للتكبير — الصورة الكاملة تحتوي على الفوائد والمكونات وطريقة الاستعمال.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <h4 id="aboutTitle">عن Forever</h4>
+      <p id="aboutText">
+        شركة فوريفر ليفينغ برودكتس هي شركة أمريكية تأسست سنة 1978، وتقدم مجموعة من المنتجات الطبيعية ذات الجودة العالية
+        المعتمدة أساسا على نبتة الألوفيرا، منتشرة في أكثر من 170 دولة عبر العالم. منتجاتها حاصلة على شواهد الجودة ISO
+        ومصادقة وزارة الصحة، وتوافق الشريعة الإسلامية (حلال).
+      </p>
+      <div class="badges-card">
+        <img src="img/badges.png" alt="Halal - ISO 9001/14001 - Ministère de la Santé">
+      </div>
+    </div>
+    <div>
+      <h4 id="contactTitle">تواصل معنا</h4>
+      <p id="contactText">لأي استفسار أو طلب، تواصلوا معنا مباشرة عبر واتساب وسنجيبكم في أقرب وقت.</p>
+    </div>
+  </div>
+  <div class="copy" id="copyText">كل الأسعار والمعلومات مأخوذة من الكاتالوغ الرسمي لمنتجات Forever — الأسعار قابلة للتغيير.</div>
+</footer>
+
+<a class="wa-float" id="floatWhatsapp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.385.694 4.61 1.885 6.49L4 29l7.693-1.865A11.94 11.94 0 0 0 16.001 27C22.629 27 28 21.627 28 15S22.629 3 16.001 3zm0 21.818c-1.925 0-3.716-.55-5.24-1.5l-.376-.223-4.564 1.106 1.122-4.448-.245-.396A9.77 9.77 0 0 1 5.182 15c0-5.964 4.855-10.818 10.819-10.818S26.82 9.036 26.82 15 21.965 24.818 16.001 24.818zm5.6-8.15c-.307-.154-1.815-.897-2.097-1-.281-.103-.486-.154-.69.154-.204.307-.79 1-.968 1.205-.178.205-.357.23-.664.077-.307-.154-1.296-.478-2.469-1.523-.913-.814-1.53-1.82-1.71-2.127-.178-.307-.019-.473.135-.626.139-.138.307-.358.46-.537.154-.18.205-.307.307-.512.103-.205.051-.384-.026-.538-.077-.154-.69-1.663-.945-2.277-.249-.598-.502-.517-.69-.527l-.588-.01c-.205 0-.538.077-.82.384-.281.307-1.073 1.049-1.073 2.558s1.098 2.967 1.251 3.172c.154.205 2.16 3.3 5.234 4.627.731.316 1.302.505 1.747.646.734.234 1.402.201 1.931.122.589-.088 1.815-.742 2.07-1.459.256-.717.256-1.332.18-1.459-.077-.128-.282-.205-.589-.359z"/></svg>
+</a>
+
+<script>
+/* ================= CONFIG ================= */
+// عدّل رقم واتساب هنا (بصيغة دولية بدون + أو 00، مثال المغرب: 2126XXXXXXXX)
+const WHATSAPP_NUMBER = "212767227746";
+
+/* ================= STATE ================= */
+let CATALOG = { categories: [], items: [] };
+let activeCategory = "all";
+let searchTerm = "";
+let sortMode = "default";
+let LANG = localStorage.getItem('sf_lang') || 'ar';
+
+/* ================= I18N ================= */
+const I18N = {
+  ar: {
+    pageTitle: "كاتالوغ منتجات Forever",
+    pageDesc: "كاتالوغ تفاعلي لمنتجات فوريفر ليفينغ - تصفح، ابحث، واطلب بسهولة",
+    brandName: "كاتالوغ Forever",
+    brandSub: "منتجات فوريفر ليفينغ",
+    searchPlaceholder: "ابحث عن منتج، مرجع، أو استخدام (مثال: ضغط الدم، ترطيب...)",
+    headerWa: "اطلب عبر واتساب",
+    sidebarTitle: "الأقسام",
+    sidebarClose: "✕ إغلاق",
+    allProducts: "كل المنتجات",
+    optDefault: "الترتيب الافتراضي",
+    optPriceAsc: "السعر: من الأقل للأعلى",
+    optPriceDesc: "السعر: من الأعلى للأقل",
+    optName: "الاسم: أ-ي",
+    resultCount: (n)=>`${n} منتج`,
+    searchResultsFor: (q)=>`نتائج البحث عن "${q}"`,
+    emptyState: "لم يتم العثور على أي منتج مطابق لبحثك.",
+    bundleBadge: "باقة",
+    refShort: "مرجع",
+    modalRef: (r)=>`المرجع: ${r}`,
+    modalContentsTitle: "محتوى الباقة:",
+    modalWa: "اطلب عبر واتساب",
+    modalHint: "اضغط على الصورة للتكبير — الصورة الكاملة تحتوي على الفوائد والمكونات وطريقة الاستعمال.",
+    aboutTitle: "عن Forever",
+    aboutText: `شركة فوريفر ليفينغ برودكتس هي شركة أمريكية تأسست سنة 1978، وتقدم مجموعة من المنتجات الطبيعية ذات الجودة العالية
+        المعتمدة أساسا على نبتة الألوفيرا، منتشرة في أكثر من 170 دولة عبر العالم. منتجاتها حاصلة على شواهد الجودة ISO
+        ومصادقة وزارة الصحة، وتوافق الشريعة الإسلامية (حلال).`,
+    contactTitle: "تواصل معنا",
+    contactText: "لأي استفسار أو طلب، تواصلوا معنا مباشرة عبر واتساب وسنجيبكم في أقرب وقت.",
+    copyText: "كل الأسعار والمعلومات مأخوذة من الكاتالوغ الرسمي لمنتجات Forever — الأسعار قابلة للتغيير.",
+    waHeaderMsg: "مرحبا، أرغب في الاستفسار عن منتجات فوريفر من الكاتالوغ.",
+    waOrderMsg: (item)=>`مرحبا، أرغب في طلب منتج: ${L(item,'name')}${item.ref? ' (مرجع '+item.ref+')':''} - السعر ${item.price||''} DH`,
+    loadError: "تعذر تحميل بيانات الكاتالوغ (data/catalog.json). تأكد من تشغيل الموقع عبر خادم محلي وليس فتح الملف مباشرة.",
+    toggleLabel: "FR",
+  },
+  fr: {
+    pageTitle: "Catalogue Produits Forever",
+    pageDesc: "Catalogue interactif des produits Forever Living - parcourez, cherchez, commandez facilement",
+    brandName: "Catalogue Forever",
+    brandSub: "Produits Forever Living",
+    searchPlaceholder: "Rechercher un produit, une réf., ou un usage (ex: tension, hydratation...)",
+    headerWa: "Commander via WhatsApp",
+    sidebarTitle: "Catégories",
+    sidebarClose: "✕ Fermer",
+    allProducts: "Tous les produits",
+    optDefault: "Tri par défaut",
+    optPriceAsc: "Prix : croissant",
+    optPriceDesc: "Prix : décroissant",
+    optName: "Nom : A-Z",
+    resultCount: (n)=>`${n} produit${n>1?'s':''}`,
+    searchResultsFor: (q)=>`Résultats pour « ${q} »`,
+    emptyState: "Aucun produit ne correspond à votre recherche.",
+    bundleBadge: "Pack",
+    refShort: "réf",
+    modalRef: (r)=>`Réf : ${r}`,
+    modalContentsTitle: "Contenu du pack :",
+    modalWa: "Commander via WhatsApp",
+    modalHint: "Cliquez sur l'image pour zoomer — l'image complète contient les bienfaits, ingrédients et le mode d'emploi.",
+    aboutTitle: "À propos de Forever",
+    aboutText: `Forever Living Products est une entreprise américaine fondée en 1978, proposant une gamme de produits
+        naturels de haute qualité à base d'Aloe Vera, distribués dans plus de 170 pays. Ses produits sont certifiés ISO,
+        approuvés par le Ministère de la Santé, et conformes à la charia islamique (Halal).`,
+    contactTitle: "Contactez-nous",
+    contactText: "Pour toute question ou commande, contactez-nous directement via WhatsApp, nous vous répondrons rapidement.",
+    copyText: "Tous les prix et informations proviennent du catalogue officiel des produits Forever — les prix sont sujets à modification.",
+    waHeaderMsg: "Bonjour, je souhaite avoir des informations sur les produits Forever du catalogue.",
+    waOrderMsg: (item)=>`Bonjour, je souhaite commander le produit : ${L(item,'name')}${item.ref? ' (réf '+item.ref+')':''} - Prix ${item.price||''} DH`,
+    loadError: "Impossible de charger les données du catalogue (data/catalog.json). Assurez-vous de lancer le site via un serveur local.",
+    toggleLabel: "AR",
+  }
+};
+function t(key, ...args){
+  const v = I18N[LANG][key];
+  return typeof v === 'function' ? v(...args) : v;
+}
+function L(item, field){
+  if(!item) return '';
+  if(LANG==='fr' && item[field+'_fr']) return item[field+'_fr'];
+  return item[field];
+}
+function LCat(cat){
+  if(!cat) return '';
+  return LANG==='fr' && cat.name_fr ? cat.name_fr : cat.name;
+}
+
+function applyStaticI18n(){
+  document.documentElement.setAttribute('lang', LANG);
+  document.documentElement.setAttribute('dir', LANG==='fr' ? 'ltr' : 'rtl');
+  document.title = t('pageTitle');
+  document.querySelector('meta[name="description"]').setAttribute('content', t('pageDesc'));
+  document.querySelector('.brand > span:last-child').childNodes[0].textContent = t('brandName');
+  document.querySelector('.brand small').textContent = t('brandSub');
+  els.searchInput.placeholder = t('searchPlaceholder');
+  document.getElementById('headerWaText').textContent = t('headerWa');
+  document.getElementById('sidebarTitle').textContent = t('sidebarTitle');
+  document.getElementById('sidebarClose').textContent = t('sidebarClose');
+  document.getElementById('optDefault').textContent = t('optDefault');
+  document.getElementById('optPriceAsc').textContent = t('optPriceAsc');
+  document.getElementById('optPriceDesc').textContent = t('optPriceDesc');
+  document.getElementById('optName').textContent = t('optName');
+  document.getElementById('emptyStateText').textContent = t('emptyState');
+  document.getElementById('modalContentsTitle').textContent = t('modalContentsTitle');
+  document.getElementById('modalWaText').textContent = t('modalWa');
+  document.getElementById('modalHint').textContent = t('modalHint');
+  document.getElementById('aboutTitle').textContent = t('aboutTitle');
+  document.getElementById('aboutText').textContent = t('aboutText');
+  document.getElementById('contactTitle').textContent = t('contactTitle');
+  document.getElementById('contactText').textContent = t('contactText');
+  document.getElementById('copyText').textContent = t('copyText');
+  document.getElementById('langToggle').textContent = t('toggleLabel');
+  els.headerWhatsapp.href = waLink(t('waHeaderMsg'));
+  document.getElementById('floatWhatsapp').href = waLink(t('waHeaderMsg'));
+}
+
+const els = {
+  grid: document.getElementById('grid'),
+  catList: document.getElementById('catList'),
+  searchInput: document.getElementById('searchInput'),
+  clearBtn: document.getElementById('clearBtn'),
+  sectionTitle: document.getElementById('sectionTitle'),
+  resultCount: document.getElementById('resultCount'),
+  emptyState: document.getElementById('emptyState'),
+  categoryBanner: document.getElementById('categoryBanner'),
+  sortSelect: document.getElementById('sortSelect'),
+  headerWhatsapp: document.getElementById('headerWhatsapp'),
+};
+
+function waLink(text){
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+}
+
+applyStaticI18n();
+
+document.getElementById('langToggle').addEventListener('click', ()=>{
+  LANG = LANG==='ar' ? 'fr' : 'ar';
+  localStorage.setItem('sf_lang', LANG);
+  applyStaticI18n();
+  render();
+  if(heroSlidesData.length) renderHeroSlides();
+  if(modalBackdrop.classList.contains('open') && currentModalId){
+    openModal(currentModalId);
+  }
+});
+
+fetch('data/catalog.json').then(r=>r.json()).then(data=>{
+  CATALOG = data;
+  buildSidebar();
+  render();
+  initHeroSlider();
+}).catch(err=>{
+  els.grid.innerHTML = `<div style="padding:40px;color:#a33">${t('loadError')}</div>`;
+  console.error(err);
+});
+
+function countFor(catId){
+  if(catId==='all') return CATALOG.items.length;
+  return CATALOG.items.filter(it=>it.category===catId).length;
+}
+
+function LTags(item){
+  return (LANG==='fr' && item.tags_fr) ? item.tags_fr : (item.tags||[]);
+}
+function LContents(item){
+  return (LANG==='fr' && item.contents_fr) ? item.contents_fr : (item.contents||[]);
+}
+
+function buildSidebar(){
+  const all = [{id:'all', name:t('allProducts')}, ...CATALOG.categories];
+  els.catList.innerHTML = all.map(c=>`
+    <li class="cat-item ${c.id===activeCategory?'active':''}" data-cat="${c.id}">
+      <span>${c.id==='all' ? t('allProducts') : LCat(c)}</span>
+      <span class="count">${countFor(c.id)}</span>
+    </li>
+  `).join('');
+  els.catList.querySelectorAll('.cat-item').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      activeCategory = el.dataset.cat;
+      searchTerm = '';
+      els.searchInput.value='';
+      closeSidebarMobile();
+      render();
+    });
+  });
+}
+
+function matchesSearch(item, term){
+  if(!term) return true;
+  const hay = [item.name, item.name_fr, item.ref, ...(item.tags||[]), ...(item.tags_fr||[])].join(' ').toLowerCase();
+  return hay.includes(term.toLowerCase());
+}
+
+function getFiltered(){
+  let list = CATALOG.items.slice();
+  if(searchTerm){
+    list = list.filter(it=>matchesSearch(it, searchTerm));
+  } else if(activeCategory!=='all'){
+    list = list.filter(it=>it.category===activeCategory);
+  }
+  if(sortMode==='price_asc') list.sort((a,b)=>(a.price||0)-(b.price||0));
+  else if(sortMode==='price_desc') list.sort((a,b)=>(b.price||0)-(a.price||0));
+  else if(sortMode==='name') list.sort((a,b)=>L(a,'name').localeCompare(L(b,'name'), LANG==='fr'?'fr':'ar'));
+  else list.sort((a,b)=>a.page-b.page);
+  return list;
+}
+
+function render(){
+  buildSidebar();
+  const list = getFiltered();
+
+  // section title + banner
+  if(searchTerm){
+    els.sectionTitle.textContent = t('searchResultsFor', searchTerm);
+    els.categoryBanner.innerHTML = '';
+  } else if(activeCategory==='all'){
+    els.sectionTitle.textContent = t('allProducts');
+    els.categoryBanner.innerHTML = '';
+  } else {
+    const cat = CATALOG.categories.find(c=>c.id===activeCategory);
+    els.sectionTitle.textContent = cat ? LCat(cat) : '';
+    els.categoryBanner.innerHTML = cat ? `
+      <div class="category-banner">
+        <img src="img/full/${cat.banner}" alt="${LCat(cat)}">
+        <div class="cap"><span>${LCat(cat)}</span></div>
+      </div>` : '';
+  }
+  els.resultCount.textContent = t('resultCount', list.length);
+
+  if(list.length===0){
+    els.grid.style.display='none';
+    els.emptyState.style.display='block';
+  } else {
+    els.grid.style.display='grid';
+    els.emptyState.style.display='none';
+    els.grid.innerHTML = list.map(cardHtml).join('');
+    els.grid.querySelectorAll('.card').forEach(el=>{
+      el.addEventListener('click', ()=>openModal(el.dataset.id));
+    });
+  }
+}
+
+function cardHtml(item){
+  return `
+    <div class="card" data-id="${item.id}">
+      <div class="thumb">
+        ${item.bundle ? `<span class="bundle-badge">${t('bundleBadge')}</span>` : ''}
+        <img loading="lazy" src="img/thumb/${item.thumb}" alt="${L(item,'name')}">
+      </div>
+      <div class="body">
+        <div class="name">${L(item,'name')}</div>
+        <div class="meta">
+          <span class="price">${item.price!=null? item.price+' DH':''}</span>
+          <span class="ref">${item.ref? t('refShort')+' '+item.ref : ''}</span>
+        </div>
+      </div>
+    </div>`;
+}
+
+/* ---------------- Hero Slider ---------------- */
+let heroIndex = 0;
+let heroTimer = null;
+let heroSlidesData = [];
+
+// Custom promo slides shown before the category slides.
+const PROMO_SLIDES = [
+  {
+    img: "img/hero/rachid.jpg",
+    waMsg: {
+      ar: "مرحبا رشيد، شفت الكاتالوغ ديالك وبغيت نعرف أكثر على منتجات Forever.",
+      fr: "Bonjour Rachid, j'ai vu votre catalogue et je souhaite en savoir plus sur les produits Forever."
+    },
+    cta: { ar: "تواصل مع رشيد عبر واتساب", fr: "Contacter Rachid sur WhatsApp" }
+  }
+];
+
+function initHeroSlider(){
+  const promo = PROMO_SLIDES.map(p=>({type:'promo', ...p}));
+  const cats = CATALOG.categories.map(c=>({type:'category', id:c.id}));
+  heroSlidesData = [...promo, ...cats];
+  renderHeroSlides();
+  document.getElementById('heroPrev').addEventListener('click', ()=>goHero(heroIndex-1));
+  document.getElementById('heroNext').addEventListener('click', ()=>goHero(heroIndex+1));
+  startHeroAutoplay();
+}
+
+function renderHeroSlides(){
+  const track = document.getElementById('heroTrack');
+  track.innerHTML = heroSlidesData.map((slide,i)=>{
+    if(slide.type==='promo'){
+      return `<div class="hero-slide hero-slide-promo" data-i="${i}">
+        <div class="bg" style="background-image:url('${slide.img}')"></div>
+        <img src="${slide.img}" alt="${slide.cta[LANG] || slide.cta.ar}" loading="lazy">
+      </div>`;
+    }
+    const cat = CATALOG.categories.find(c=>c.id===slide.id);
+    return `<div class="hero-slide" data-i="${i}">
+      <div class="bg" style="background-image:url('img/full/${cat.banner}')"></div>
+      <img src="img/full/${cat.banner}" alt="${LCat(cat)}" loading="lazy">
+      <div class="cap"><span>${LCat(cat)}</span></div>
+    </div>`;
+  }).join('');
+  track.querySelectorAll('.hero-slide').forEach(el=>{
+    el.addEventListener('click', ()=>{
+      const slide = heroSlidesData[parseInt(el.dataset.i,10)];
+      if(slide.type==='promo'){
+        window.open(waLink(slide.waMsg[LANG] || slide.waMsg.ar), '_blank', 'noopener');
+        return;
+      }
+      activeCategory = slide.id;
+      searchTerm=''; els.searchInput.value=''; els.clearBtn.style.display='none';
+      render();
+      const target = document.querySelector('.layout');
+      if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+  const dots = document.getElementById('heroDots');
+  dots.innerHTML = heroSlidesData.map((_,i)=>`<button data-i="${i}"></button>`).join('');
+  dots.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>goHero(parseInt(b.dataset.i,10))));
+  updateHeroUI();
+}
+
+function goHero(i){
+  const n = heroSlidesData.length;
+  if(n===0) return;
+  heroIndex = ((i%n)+n)%n;
+  updateHeroUI();
+  restartHeroAutoplay();
+}
+
+function updateHeroUI(){
+  const track = document.getElementById('heroTrack');
+  if(track) track.style.transform = `translateX(${-heroIndex*100}%)`;
+  document.querySelectorAll('#heroDots button').forEach((b,i)=>b.classList.toggle('active', i===heroIndex));
+}
+
+function startHeroAutoplay(){ heroTimer = setInterval(()=>goHero(heroIndex+1), 5000); }
+function restartHeroAutoplay(){ clearInterval(heroTimer); startHeroAutoplay(); }
+
+/* ---------------- Modal ---------------- */
+const modalBackdrop = document.getElementById('modalBackdrop');
+const modalImgWrap = document.getElementById('modalImgWrap');
+const modalImg = document.getElementById('modalImg');
+
+let currentModalId = null;
+function openModal(id){
+  const item = CATALOG.items.find(it=>it.id===id);
+  if(!item) return;
+  currentModalId = id;
+  const cat = CATALOG.categories.find(c=>c.id===item.category);
+  document.getElementById('modalCat').textContent = cat? LCat(cat) : '';
+  document.getElementById('modalName').textContent = L(item,'name');
+  document.getElementById('modalRef').textContent = item.ref ? t('modalRef', item.ref) : '';
+  document.getElementById('modalPrice').textContent = item.price!=null ? `${item.price} DH` : '';
+  document.getElementById('modalTags').innerHTML = LTags(item).map(tag=>`<span class="tag">${tag}</span>`).join('');
+
+  const contentsBox = document.getElementById('modalContents');
+  const contents = LContents(item);
+  if(contents && contents.length){
+    contentsBox.style.display='block';
+    document.getElementById('modalContentsList').innerHTML = contents.map(c=>`<li>${c}</li>`).join('');
+  } else {
+    contentsBox.style.display='none';
+  }
+
+  modalImg.src = `img/full/p${String(item.page).padStart(3,'0')}.jpg`;
+  modalImg.alt = L(item,'name');
+  modalImgWrap.classList.remove('zoomed');
+
+  document.getElementById('modalWhatsapp').href = waLink(t('waOrderMsg', item));
+
+  modalBackdrop.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(){
+  modalBackdrop.classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+modalBackdrop.addEventListener('click', (e)=>{ if(e.target===modalBackdrop) closeModal(); });
+modalImgWrap.addEventListener('click', ()=> modalImgWrap.classList.toggle('zoomed'));
+document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+
+/* ---------------- Search / Sort ---------------- */
+let searchDebounce;
+els.searchInput.addEventListener('input', (e)=>{
+  clearTimeout(searchDebounce);
+  const val = e.target.value;
+  els.clearBtn.style.display = val ? 'block' : 'none';
+  searchDebounce = setTimeout(()=>{
+    searchTerm = val.trim();
+    render();
+  }, 120);
+});
+els.clearBtn.addEventListener('click', ()=>{
+  els.searchInput.value=''; searchTerm=''; els.clearBtn.style.display='none'; render();
+});
+els.sortSelect.addEventListener('change', (e)=>{ sortMode = e.target.value; render(); });
+
+/* ---------------- Mobile sidebar ---------------- */
+const sidebay = document.getElementById('sidebar');
+function openSidebarMobile(){ document.body.classList.add('menu-open'); document.getElementById('sidebar').classList.add('open'); }
+function closeSidebarMobile(){ document.body.classList.remove('menu-open'); document.getElementById('sidebar').classList.remove('open'); }
+document.getElementById('menuBtn').addEventListener('click', openSidebarMobile);
+document.getElementById('sidebarClose').addEventListener('click', closeSidebarMobile);
+document.getElementById('backdrop').addEventListener('click', closeSidebarMobile);
+</script>
+</body>
+</html>
