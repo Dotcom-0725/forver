@@ -1,103 +1,278 @@
 {
  "categories": [
   {
+   "id": "new",
+   "name": "منتجات جديدة",
+   "name_fr": "Nouveaux produits",
+   "banner": "p004.jpg"
+  },
+  {
    "id": "aloe",
-   "name": "مشروبات الألوة",
-   "banner": "p004.jpg",
-   "name_fr": "Boissons à l'Aloe Vera"
+   "name": "مشروبات الألوفيرا",
+   "name_fr": "Boissons à l'Aloe Vera",
+   "banner": "p013.jpg"
   },
   {
    "id": "bee",
    "name": "منتجات النحل",
-   "banner": "p012.jpg",
-   "name_fr": "Produits de la ruche"
+   "name_fr": "Produits de la ruche",
+   "banner": "p021.jpg"
   },
   {
    "id": "nutrition",
    "name": "منتجات التغذية",
-   "banner": "p016.jpg",
-   "name_fr": "Compléments nutritionnels"
+   "name_fr": "Compléments nutritionnels",
+   "banner": "p025.jpg"
   },
   {
    "id": "weight",
    "name": "منتجات الرياضة والتحكم في الوزن",
-   "banner": "p032.jpg",
-   "name_fr": "Sport et contrôle du poids"
+   "name_fr": "Sport et contrôle du poids",
+   "banner": "p041.jpg"
   },
   {
    "id": "beauty",
    "name": "العناية الشخصية والجمال",
-   "banner": "p039.jpg",
-   "name_fr": "Soins personnels et beauté"
-  },
-  {
-   "id": "sonya",
-   "name": "باقة سونيا",
-   "banner": "p071.jpg",
-   "name_fr": "Pack Sonya"
+   "name_fr": "Soins personnels et beauté",
+   "banner": "p048.jpg"
   },
   {
    "id": "infinite",
    "name": "باقة انفينيتي",
-   "banner": "p073.jpg",
-   "name_fr": "Pack Infinite"
+   "name_fr": "Pack Infinite",
+   "banner": "p080.jpg"
   },
   {
    "id": "perfume",
    "name": "عطور فوريفر",
-   "banner": "p075.jpg",
-   "name_fr": "Parfums Forever"
+   "name_fr": "Parfums Forever",
+   "banner": "p082.jpg"
   },
   {
    "id": "abroad",
    "name": "منتجات متوفرة خارج المغرب",
-   "banner": "p077.jpg",
-   "name_fr": "Produits disponibles hors Maroc"
+   "name_fr": "Produits disponibles hors Maroc",
+   "banner": "p084.jpg"
   }
  ],
  "items": [
   {
    "id": "p005",
    "page": 5,
-   "name": "لب الألوفيرا المثبت",
-   "ref": "15",
-   "price": 425,
-   "category": "aloe",
+   "ref": "672",
+   "price": 197,
+   "category": "new",
    "thumb": "p005.jpg",
+   "name": "أبسوربنت - د",
+   "name_fr": "Forever Absorbent-D",
    "tags": [
-    "الجهاز الهضمي (المعدة - قرحة المعدة - جرثومة المعدة - سلامة الأمعاء - غازات - انتفاخات - القبض - الاسهال - مكروب القولون العصبي)",
-    "فقر الدم",
-    "السكر",
-    "ضغط الدم",
-    "مشاكل جلدية داخلية",
-    "النحافة",
-    "التحكم في الوزن",
-    "القلب والشرايين",
-    "التعب والارهاق",
-    "مشاكل اللثة"
+    "الأشخاص الذين يعانون من نقص فيتامين D نظرا لصعوبة الحصول على كميات كافية من النظام الغذائي أو التعرض الكافي للشمس",
+    "آلام العضلات والمفاصل",
+    "الشقيقة",
+    "التعب والإرهاق المستمر",
+    "آلام في العظام",
+    "ضعف العضلات",
+    "تأخر التئام الجروح",
+    "العدوى المتكررة (مثل نزلات البرد)",
+    "الاكتئاب أو تقلبات المزاج",
+    "تساقط الشعر",
+    "مشاكل في النوم أو الأرق",
+    "هشاشة أو لين العظام",
+    "تقوس الساقين أو تأخر النمو عند الأطفال"
    ],
-   "name_fr": "Forever Aloe Vera Gel",
    "tags_fr": [
-    "Système digestif (estomac, ulcères, H. pylori, confort intestinal, gaz, ballonnements, constipation, diarrhée, côlon irritable)",
-    "Anémie",
-    "Diabète / glycémie",
-    "Tension artérielle",
-    "Problèmes cutanés internes",
-    "Maigreur",
-    "Contrôle du poids",
-    "Cœur et artères",
-    "Fatigue et épuisement",
-    "Problèmes de gencives"
+    "Carence en vitamine D",
+    "Douleurs musculaires et articulaires",
+    "Migraine",
+    "Fatigue persistante",
+    "Douleurs osseuses",
+    "Faiblesse musculaire",
+    "Cicatrisation lente",
+    "Infections fréquentes (rhumes)",
+    "Dépression ou sautes d'humeur",
+    "Chute de cheveux",
+    "Troubles du sommeil, insomnie",
+    "Ostéoporose ou ramollissement osseux",
+    "Jambes arquées ou retard de croissance chez l'enfant"
    ]
   },
   {
    "id": "p006",
    "page": 6,
-   "name": "لب الألوفيرا المثبت MINI",
-   "ref": "17163",
-   "price": 142,
-   "category": "aloe",
+   "ref": "676",
+   "price": 90,
+   "category": "new",
    "thumb": "p006.jpg",
+   "name": "Forever AloeTurm™",
+   "name_fr": "Forever Aloe Turm",
+   "tags": [
+    "ضعف أو انخفاض المناعة.",
+    "آلام أو تيبس المفاصل الخفيفة.",
+    "مشاكل هضمية بسيطة أو الرغبة في دعم الهضم.",
+    "الأشخاص الذين يبحثون عن مضادات أكسدة إضافية ضمن نظامهم الغذائي."
+   ],
+   "tags_fr": [
+    "Immunité faible ou affaiblie",
+    "Douleurs ou raideurs articulaires légères",
+    "Petits troubles digestifs ou besoin de soutenir la digestion",
+    "Personnes cherchant un apport supplémentaire en antioxydants dans leur alimentation"
+   ]
+  },
+  {
+   "id": "p007",
+   "page": 7,
+   "ref": "613",
+   "price": 1077,
+   "category": "new",
+   "thumb": "p007.jpg",
+   "name": "كولاجين البحري",
+   "name_fr": "Forever Marine Collagen",
+   "tags": [
+    "ترهل البشرة أو فقدان المرونة مع التقدم في العمر.",
+    "ضعف أو تقصف الشعر.",
+    "هشاشة الأظافر أو بطء نموها.",
+    "الراغبين في دعم إنتاج الكولاجين بعد سن 25 عاماً حيث يبدأ إنتاجه الطبيعي بالانخفاض."
+   ],
+   "tags_fr": [
+    "Relâchement cutané ou perte d'élasticité avec l'âge",
+    "Cheveux faibles ou cassants",
+    "Ongles fragiles ou à croissance lente",
+    "Personnes souhaitant soutenir la production de collagène après 25 ans, quand sa production naturelle commence à baisser"
+   ]
+  },
+  {
+   "id": "p008",
+   "page": 8,
+   "ref": "082",
+   "price": 160,
+   "category": "new",
+   "thumb": "p008.jpg",
+   "name": "زيت برينجراج",
+   "name_fr": "Huile de Bhringraj (Hair Fall Control Oil)",
+   "tags": [
+    "تساقط الشعر",
+    "الشيب في الشعر",
+    "الشعر الضعيف أو المتقصف",
+    "القشرة وحكة فروة الرأس",
+    "جفاف الشعر",
+    "بطء نمو الشعر",
+    "فقدان اللمعان والحيوية"
+   ],
+   "tags_fr": [
+    "Chute de cheveux",
+    "Cheveux blancs",
+    "Cheveux faibles ou cassants",
+    "Pellicules et démangeaisons du cuir chevelu",
+    "Cheveux secs",
+    "Croissance lente des cheveux",
+    "Perte de brillance et de vitalité"
+   ]
+  },
+  {
+   "id": "p009",
+   "page": 9,
+   "ref": "032",
+   "price": 84,
+   "category": "new",
+   "thumb": "p009.jpg",
+   "name": "دريم باي فوريفر للنساء",
+   "name_fr": "Dream by Forever - Déodorant Spray Femme",
+   "tags": [
+    "رائحة العرق القوية",
+    "البشرة الحساسة (لأنه لطيف وخالي من الألمنيوم)",
+    "الجفاف تحت الإبط (بفضل الألوفيرا)",
+    "من يفضل منتجات طبيعية"
+   ],
+   "tags_fr": [
+    "Odeur de transpiration forte",
+    "Peau sensible (formule douce et sans aluminium)",
+    "Sécheresse sous les aisselles (grâce à l'aloe vera)",
+    "Personnes préférant les produits naturels"
+   ]
+  },
+  {
+   "id": "p010",
+   "page": 10,
+   "ref": "033",
+   "price": 84,
+   "category": "new",
+   "thumb": "p010.jpg",
+   "name": "ديزاير باي فوريفر للرجال",
+   "name_fr": "Desire by Forever - Déodorant Spray Homme",
+   "tags": [
+    "رائحة العرق القوية",
+    "البشرة الحساسة",
+    "جفاف تحت الإبط",
+    "من يبحث عن مزيل العرق برائحة عطر (Perfume-like) تدوم طويلاً"
+   ],
+   "tags_fr": [
+    "Odeur de transpiration forte",
+    "Peau sensible",
+    "Sécheresse sous les aisselles",
+    "Personnes cherchant un déodorant au parfum longue durée (effet parfum)"
+   ]
+  },
+  {
+   "id": "p011",
+   "page": 11,
+   "ref": "087",
+   "price": 113,
+   "category": "new",
+   "thumb": "p011.jpg",
+   "name": "Radiance Facial Cleanser",
+   "name_fr": "Forever Radiance Face Wash",
+   "tags": [
+    "البشرة الباهتة أو غير النضرة",
+    "تراكم الأوساخ والدهون",
+    "مسام مسدودة",
+    "جفاف خفيف في البشرة",
+    "مناسب لجميع أنواع البشرة (حتى الحساسة نسبيًا)"
+   ],
+   "tags_fr": [
+    "Peau terne ou sans éclat",
+    "Accumulation d'impuretés et de sébum",
+    "Pores obstrués",
+    "Légère sécheresse de la peau",
+    "Convient à tous les types de peau (même relativement sensible)"
+   ]
+  },
+  {
+   "id": "p012",
+   "page": 12,
+   "ref": "088",
+   "price": 155,
+   "category": "new",
+   "thumb": "p012.jpg",
+   "name": "RADIANCE MOISTURISER",
+   "name_fr": "Forever Radiance Moisturiser",
+   "tags": [
+    "جفاف البشرة",
+    "بشرة باهتة أو غير نضرة",
+    "احمرار أو تهيج خفيف",
+    "تفاوت لون البشرة",
+    "مسام مسدودة",
+    "بداية حب الشباب (بفضل الساليسيليك)",
+    "مناسب لجميع أنواع البشرة: الجافة، العادية، المختلطة"
+   ],
+   "tags_fr": [
+    "Peau sèche",
+    "Peau terne ou sans éclat",
+    "Rougeurs ou légères irritations",
+    "Teint irrégulier",
+    "Pores obstrués",
+    "Début d'acné (grâce à l'acide salicylique)",
+    "Convient à tous les types de peau : sèche, normale, mixte"
+   ]
+  },
+  {
+   "id": "p014",
+   "page": 14,
+   "ref": "15",
+   "price": 425,
+   "category": "aloe",
+   "thumb": "p014.jpg",
+   "name": "لب الألوفيرا المثبت",
+   "name_fr": "Forever Aloe Vera Gel",
    "tags": [
     "الجهاز الهضمي (المعدة - قرحة المعدة - جرثومة المعدة - سلامة الأمعاء - غازات - انتفاخات - القبض - الاسهال - مكروب القولون العصبي)",
     "فقر الدم",
@@ -110,7 +285,6 @@
     "التعب والارهاق",
     "مشاكل اللثة"
    ],
-   "name_fr": "Forever Aloe Vera Gel MINI",
    "tags_fr": [
     "Système digestif (estomac, ulcères, H. pylori, confort intestinal, gaz, ballonnements, constipation, diarrhée, côlon irritable)",
     "Anémie",
@@ -125,13 +299,48 @@
    ]
   },
   {
-   "id": "p007",
-   "page": 7,
-   "name": "بيري نكتار",
+   "id": "p015",
+   "page": 15,
+   "ref": "17163",
+   "price": 142,
+   "category": "aloe",
+   "thumb": "p015.jpg",
+   "name": "لب الألوفيرا المثبت MINI",
+   "name_fr": "Forever Aloe Vera Gel MINI",
+   "tags": [
+    "الجهاز الهضمي (المعدة - قرحة المعدة - جرثومة المعدة - سلامة الأمعاء - غازات - انتفاخات - القبض - الاسهال - مكروب القولون العصبي)",
+    "فقر الدم",
+    "السكر",
+    "ضغط الدم",
+    "مشاكل جلدية داخلية",
+    "النحافة",
+    "التحكم في الوزن",
+    "القلب والشرايين",
+    "التعب والارهاق",
+    "مشاكل اللثة"
+   ],
+   "tags_fr": [
+    "Système digestif (estomac, ulcères, H. pylori, confort intestinal, gaz, ballonnements, constipation, diarrhée, côlon irritable)",
+    "Anémie",
+    "Diabète / glycémie",
+    "Tension artérielle",
+    "Problèmes cutanés internes",
+    "Maigreur",
+    "Contrôle du poids",
+    "Cœur et artères",
+    "Fatigue et épuisement",
+    "Problèmes de gencives"
+   ]
+  },
+  {
+   "id": "p016",
+   "page": 16,
    "ref": "34",
    "price": 425,
    "category": "aloe",
-   "thumb": "p007.jpg",
+   "thumb": "p016.jpg",
+   "name": "بيري نكتار",
+   "name_fr": "Forever Aloe Berry Nectar",
    "tags": [
     "التبول الإرادي",
     "الضعف الجنسي",
@@ -153,7 +362,6 @@
     "المشاكل الجهاز الهضمي",
     "ارتفاع الكوليسترول"
    ],
-   "name_fr": "Forever Aloe Berry Nectar",
    "tags_fr": [
     "Énurésie",
     "Faiblesse sexuelle",
@@ -177,13 +385,14 @@
    ]
   },
   {
-   "id": "p008",
-   "page": 8,
-   "name": "بيري نكتار MINI",
+   "id": "p017",
+   "page": 17,
    "ref": "17353",
    "price": 142,
    "category": "aloe",
-   "thumb": "p008.jpg",
+   "thumb": "p017.jpg",
+   "name": "بيري نكتار MINI",
+   "name_fr": "Forever Aloe Berry Nectar MINI",
    "tags": [
     "التبول الإرادي",
     "الضعف الجنسي",
@@ -205,7 +414,6 @@
     "المشاكل الجهاز الهضمي",
     "ارتفاع الكوليسترول"
    ],
-   "name_fr": "Forever Aloe Berry Nectar MINI",
    "tags_fr": [
     "Énurésie",
     "Faiblesse sexuelle",
@@ -229,13 +437,14 @@
    ]
   },
   {
-   "id": "p009",
-   "page": 9,
-   "name": "قلب الألوفيرا",
+   "id": "p018",
+   "page": 18,
    "ref": "77",
    "price": 462,
    "category": "aloe",
-   "thumb": "p009.jpg",
+   "thumb": "p018.jpg",
+   "name": "قلب الألوفيرا",
+   "name_fr": "Forever Aloe Peaches",
    "tags": [
     "تقوية المناعة",
     "الجهاز الهضمي",
@@ -245,7 +454,6 @@
     "فاتح للشهية",
     "مذاق مناسب للاطفال"
    ],
-   "name_fr": "Forever Aloe Peaches",
    "tags_fr": [
     "Renforcement de l'immunité",
     "Système digestif",
@@ -257,13 +465,14 @@
    ]
   },
   {
-   "id": "p010",
-   "page": 10,
-   "name": "قلب الألوفيرا MINI",
+   "id": "p019",
+   "page": 19,
    "ref": "17783",
    "price": 154,
    "category": "aloe",
-   "thumb": "p010.jpg",
+   "thumb": "p019.jpg",
+   "name": "قلب الألوفيرا MINI",
+   "name_fr": "Forever Aloe Peaches MINI",
    "tags": [
     "تقوية المناعة",
     "الجهاز الهضمي",
@@ -273,7 +482,6 @@
     "فاتح للشهية",
     "مذاق مناسب للاطفال"
    ],
-   "name_fr": "Forever Aloe Peaches MINI",
    "tags_fr": [
     "Renforcement de l'immunité",
     "Système digestif",
@@ -285,13 +493,14 @@
    ]
   },
   {
-   "id": "p011",
-   "page": 11,
-   "name": "ألوي مانجو",
+   "id": "p020",
+   "page": 20,
    "ref": "736",
    "price": 425,
    "category": "aloe",
-   "thumb": "p011.jpg",
+   "thumb": "p020.jpg",
+   "name": "ألوي مانجو",
+   "name_fr": "Forever Aloe Mango",
    "tags": [
     "تقوية المناعة",
     "الجهاز الهضمي",
@@ -302,7 +511,6 @@
     "التعب المستمر",
     "مذاق مناسب للاطفال"
    ],
-   "name_fr": "Forever Aloe Mango",
    "tags_fr": [
     "Renforcement de l'immunité",
     "Système digestif",
@@ -315,13 +523,14 @@
    ]
   },
   {
-   "id": "p013",
-   "page": 13,
-   "name": "فوريفر بروبوليس",
+   "id": "p022",
+   "page": 22,
    "ref": "27",
    "price": 520,
    "category": "bee",
-   "thumb": "p013.jpg",
+   "thumb": "p022.jpg",
+   "name": "فوريفر بروبوليس",
+   "name_fr": "Forever Bee Propolis",
    "tags": [
     "جرثومة المعدة",
     "تقوية المناعة",
@@ -332,7 +541,6 @@
     "التهاب الشعب الهوائية",
     "أمراض الجهاز التنفسي"
    ],
-   "name_fr": "Forever Bee Propolis",
    "tags_fr": [
     "H. pylori",
     "Renforcement immunitaire",
@@ -345,13 +553,14 @@
    ]
   },
   {
-   "id": "p014",
-   "page": 14,
-   "name": "غذاء ملكة النحل",
+   "id": "p023",
+   "page": 23,
    "ref": "36",
    "price": 539,
    "category": "bee",
-   "thumb": "p014.jpg",
+   "thumb": "p023.jpg",
+   "name": "غذاء ملكة النحل",
+   "name_fr": "Forever Royal Jelly",
    "tags": [
     "الضعف الجنسي",
     "الشقيقة",
@@ -366,7 +575,6 @@
     "العقم",
     "مفيد للبشرة (المشاكل الجلدية المزمنة والتجاعيد)"
    ],
-   "name_fr": "Forever Royal Jelly",
    "tags_fr": [
     "Faiblesse sexuelle",
     "Migraine",
@@ -383,13 +591,14 @@
    ]
   },
   {
-   "id": "p015",
-   "page": 15,
-   "name": "حبوب اللقاح",
+   "id": "p024",
+   "page": 24,
    "ref": "26",
    "price": 248,
    "category": "bee",
-   "thumb": "p015.jpg",
+   "thumb": "p024.jpg",
+   "name": "حبوب اللقاح",
+   "name_fr": "Forever Bee Pollen",
    "tags": [
     "فاتح الشهية",
     "فقر الدم",
@@ -398,7 +607,6 @@
     "البروستاتا",
     "تقوية الشعر"
    ],
-   "name_fr": "Forever Bee Pollen",
    "tags_fr": [
     "Ouvre l'appétit",
     "Anémie",
@@ -409,13 +617,14 @@
    ]
   },
   {
-   "id": "p017",
-   "page": 17,
-   "name": "برو بي",
+   "id": "p026",
+   "page": 26,
    "ref": "610",
    "price": 483,
    "category": "nutrition",
-   "thumb": "p017.jpg",
+   "thumb": "p026.jpg",
+   "name": "برو بي",
+   "name_fr": "Forever Active Pro-B",
    "tags": [
     "الغازات",
     "عسر الهضم",
@@ -426,7 +635,6 @@
     "القولون العصبي",
     "يساعد على الامتصاص"
    ],
-   "name_fr": "Forever Active Pro-B",
    "tags_fr": [
     "Gaz",
     "Indigestion",
@@ -439,13 +647,14 @@
    ]
   },
   {
-   "id": "p018",
-   "page": 18,
-   "name": "فيلدز اوف غرينز",
+   "id": "p027",
+   "page": 27,
    "ref": "68",
    "price": 196,
    "category": "nutrition",
-   "thumb": "p018.jpg",
+   "thumb": "p027.jpg",
+   "name": "فيلدز اوف غرينز",
+   "name_fr": "Fields of Greens",
    "tags": [
     "السكر",
     "فقر الدم",
@@ -456,7 +665,6 @@
     "الحموضة",
     "الكرش"
    ],
-   "name_fr": "Fields of Greens",
    "tags_fr": [
     "Diabète",
     "Anémie",
@@ -469,20 +677,20 @@
    ]
   },
   {
-   "id": "p019",
-   "page": 19,
-   "name": "سوبر غرينز",
+   "id": "p028",
+   "page": 28,
    "ref": "621",
    "price": 507,
    "category": "nutrition",
-   "thumb": "p019.jpg",
+   "thumb": "p028.jpg",
+   "name": "سوبر غرينز",
+   "name_fr": "Forever Super Greens",
    "tags": [
     "فقر الدم",
     "الجهاز الهضمي",
     "تقوية العضلات",
     "السكر"
    ],
-   "name_fr": "Forever Super Greens",
    "tags_fr": [
     "Anémie",
     "Système digestif",
@@ -491,13 +699,14 @@
    ]
   },
   {
-   "id": "p020",
-   "page": 20,
-   "name": "فايبر",
+   "id": "p029",
+   "page": 29,
    "ref": "464",
    "price": 327,
    "category": "nutrition",
-   "thumb": "p020.jpg",
+   "thumb": "p029.jpg",
+   "name": "فايبر",
+   "name_fr": "Forever Fiber",
    "tags": [
     "الإمساك",
     "القولون العصبي",
@@ -509,7 +718,6 @@
     "ضبط الشهية",
     "صحة الأمعاء"
    ],
-   "name_fr": "Forever Fiber",
    "tags_fr": [
     "Constipation",
     "Côlon irritable",
@@ -523,13 +731,14 @@
    ]
   },
   {
-   "id": "p021",
-   "page": 21,
-   "name": "ثوم وزعتر",
+   "id": "p030",
+   "page": 30,
    "ref": "65",
    "price": 296,
    "category": "nutrition",
-   "thumb": "p021.jpg",
+   "thumb": "p030.jpg",
+   "name": "ثوم وزعتر",
+   "name_fr": "Forever Garlic-Thyme",
    "tags": [
     "جرتومة المعدة",
     "ارتفاع ضغط الدم",
@@ -538,7 +747,6 @@
     "ضيق التنفس",
     "التدخين"
    ],
-   "name_fr": "Forever Garlic-Thyme",
    "tags_fr": [
     "H. pylori",
     "Hypertension",
@@ -549,20 +757,20 @@
    ]
   },
   {
-   "id": "p022",
-   "page": 22,
-   "name": "فوريفر كيدز",
+   "id": "p031",
+   "page": 31,
    "ref": "354",
    "price": 227,
    "category": "nutrition",
-   "thumb": "p022.jpg",
+   "thumb": "p031.jpg",
+   "name": "فوريفر كيدز",
+   "name_fr": "Forever Kids",
    "tags": [
     "فاتح الشهية",
     "نقص التغذية",
     "زيادة الوزن",
     "النمو الطبيعي للأطفال"
    ],
-   "name_fr": "Forever Kids",
    "tags_fr": [
     "Ouvre l'appétit",
     "Carence nutritionnelle",
@@ -571,13 +779,14 @@
    ]
   },
   {
-   "id": "p023",
-   "page": 23,
-   "name": "دايلي",
+   "id": "p032",
+   "page": 32,
    "ref": "439",
    "price": 275,
    "category": "nutrition",
-   "thumb": "p023.jpg",
+   "thumb": "p032.jpg",
+   "name": "دايلي",
+   "name_fr": "Forever Daily",
    "tags": [
     "زيادة الوزن",
     "فقر الدم",
@@ -588,7 +797,6 @@
     "دعم صحة الجلد",
     "دعم الصحة العامة"
    ],
-   "name_fr": "Forever Daily",
    "tags_fr": [
     "Prise de poids",
     "Anémie",
@@ -601,19 +809,19 @@
    ]
   },
   {
-   "id": "p024",
-   "page": 24,
-   "name": "اي فيجين",
+   "id": "p033",
+   "page": 33,
    "ref": "624",
    "price": 477,
    "category": "nutrition",
-   "thumb": "p024.jpg",
+   "thumb": "p033.jpg",
+   "name": "اي فيجين",
+   "name_fr": "Forever iVision",
    "tags": [
     "حماية الأعين",
     "الجلالة",
     "حساسية العينين"
    ],
-   "name_fr": "Forever iVision",
    "tags_fr": [
     "Protection des yeux",
     "Fatigue visuelle",
@@ -621,13 +829,14 @@
    ]
   },
   {
-   "id": "p025",
-   "page": 25,
-   "name": "فيتولايز للرجال",
+   "id": "p034",
+   "page": 34,
    "ref": "374",
    "price": 458,
    "category": "nutrition",
-   "thumb": "p025.jpg",
+   "thumb": "p034.jpg",
+   "name": "فيتولايز للرجال",
+   "name_fr": "Forever Vitolize Men",
    "tags": [
     "مشاكل البروستاتا",
     "ضعف الرغبة الجنسية",
@@ -640,7 +849,6 @@
     "ضعف الجهاز البولي",
     "التهابات المسالك البولية"
    ],
-   "name_fr": "Forever Vitolize Men",
    "tags_fr": [
     "Problèmes de prostate",
     "Baisse de libido",
@@ -655,13 +863,14 @@
    ]
   },
   {
-   "id": "p026",
-   "page": 26,
-   "name": "فيتولايز للنساء",
+   "id": "p035",
+   "page": 35,
    "ref": "375",
    "price": 418,
    "category": "nutrition",
-   "thumb": "p026.jpg",
+   "thumb": "p035.jpg",
+   "name": "فيتولايز للنساء",
+   "name_fr": "Forever Vitolize Women",
    "tags": [
     "إضطرابات الهرمونات",
     "أعراض سن اليأس",
@@ -677,7 +886,6 @@
     "مشكلات الخصوبة",
     "العقم"
    ],
-   "name_fr": "Forever Vitolize Women",
    "tags_fr": [
     "Déséquilibres hormonaux",
     "Symptômes de la ménopause",
@@ -695,13 +903,14 @@
    ]
   },
   {
-   "id": "p027",
-   "page": 27,
-   "name": "Forever ImmuBlend",
+   "id": "p036",
+   "page": 36,
    "ref": "355",
    "price": 327,
    "category": "nutrition",
-   "thumb": "p027.jpg",
+   "thumb": "p036.jpg",
+   "name": "Forever ImmuBlend",
+   "name_fr": "Forever ImmuBlend",
    "tags": [
     "الأشخاص المعرضون للإنفلونزا",
     "من يعانون من ضعف المناعة",
@@ -709,7 +918,6 @@
     "معرضون لإجهاد جسدي أو نفسي (الإجهاد يقلل المناعة)",
     "النباتيون أو من يعانون من حساسية الغلوتين"
    ],
-   "name_fr": "Forever ImmuBlend",
    "tags_fr": [
     "Personnes exposées à la grippe",
     "Immunité affaiblie",
@@ -719,13 +927,14 @@
    ]
   },
   {
-   "id": "p028",
-   "page": 28,
-   "name": "ابسوربنت سي",
+   "id": "p037",
+   "page": 37,
    "ref": "48",
    "price": 287,
    "category": "nutrition",
-   "thumb": "p028.jpg",
+   "thumb": "p037.jpg",
+   "name": "ابسوربنت سي",
+   "name_fr": "Forever Absorbent-C",
    "tags": [
     "الزكام",
     "مشاكل التنفس",
@@ -735,7 +944,6 @@
     "مشاكل اللثة",
     "التذخين"
    ],
-   "name_fr": "Forever Absorbent-C",
    "tags_fr": [
     "Rhume",
     "Problèmes respiratoires",
@@ -747,13 +955,14 @@
    ]
   },
   {
-   "id": "p029",
-   "page": 29,
-   "name": "موف",
+   "id": "p038",
+   "page": 38,
    "ref": "551",
    "price": 821,
    "category": "nutrition",
-   "thumb": "p029.jpg",
+   "thumb": "p038.jpg",
+   "name": "موف",
+   "name_fr": "Forever Move",
    "tags": [
     "السياتيك",
     "نقص المادة اللزجة",
@@ -766,7 +975,6 @@
     "التورم في المفاصل",
     "الإرهاق العضلي بعد التمارين الرياضية"
    ],
-   "name_fr": "Forever Move",
    "tags_fr": [
     "Sciatique",
     "Manque de liquide synovial",
@@ -781,13 +989,14 @@
    ]
   },
   {
-   "id": "p030",
-   "page": 30,
-   "name": "الكالسيوم",
+   "id": "p039",
+   "page": 39,
    "ref": "206",
    "price": 394,
    "category": "nutrition",
-   "thumb": "p030.jpg",
+   "thumb": "p039.jpg",
+   "name": "الكالسيوم",
+   "name_fr": "Forever Calcium",
    "tags": [
     "هشاشة العظام",
     "ضعف الأسنان",
@@ -801,7 +1010,6 @@
     "السياتيك",
     "الزكام و الإنفوانزا"
    ],
-   "name_fr": "Forever Calcium",
    "tags_fr": [
     "Ostéoporose",
     "Faiblesse dentaire",
@@ -817,13 +1025,14 @@
    ]
   },
   {
-   "id": "p031",
-   "page": 31,
-   "name": "أرتيك سي",
+   "id": "p040",
+   "page": 40,
    "ref": "376",
    "price": 516,
    "category": "nutrition",
-   "thumb": "p031.jpg",
+   "thumb": "p040.jpg",
+   "name": "أرتيك سي",
+   "name_fr": "Forever Arctic Sea",
    "tags": [
     "ارتفاع الكوليسترول",
     "أمراض القلب والأوعية الدموية",
@@ -840,7 +1049,6 @@
     "آلام المفاصل والعضلات",
     "الدوالي - السياتيك"
    ],
-   "name_fr": "Forever Arctic Sea",
    "tags_fr": [
     "Cholestérol élevé",
     "Maladies cardiovasculaires",
@@ -859,13 +1067,14 @@
    ]
   },
   {
-   "id": "p033",
-   "page": 33,
-   "name": "الترا لايت",
+   "id": "p042",
+   "page": 42,
    "ref": "471",
    "price": 344,
    "category": "weight",
-   "thumb": "p033.jpg",
+   "thumb": "p042.jpg",
+   "name": "الترا لايت",
+   "name_fr": "Forever Lite Ultra",
    "tags": [
     "السمنة وزيادة الوزن",
     "ضعف الكتلة العضلية",
@@ -876,7 +1085,6 @@
     "فقر الدم",
     "النحافة"
    ],
-   "name_fr": "Forever Lite Ultra",
    "tags_fr": [
     "Obésité et surpoids",
     "Faible masse musculaire",
@@ -889,13 +1097,14 @@
    ]
   },
   {
-   "id": "p034",
-   "page": 34,
-   "name": "أرجي +",
+   "id": "p043",
+   "page": 43,
    "ref": "856",
    "price": 935,
    "category": "weight",
-   "thumb": "p034.jpg",
+   "thumb": "p043.jpg",
+   "name": "أرجي +",
+   "name_fr": "Forever Argi+",
    "tags": [
     "ضعف الدورة الدموية",
     "ارتفاع ضغط الدم",
@@ -907,7 +1116,6 @@
     "تأخر التعافي بعد التمارين الرياضية",
     "تقوية العضلات"
    ],
-   "name_fr": "Forever Argi+",
    "tags_fr": [
     "Mauvaise circulation sanguine",
     "Hypertension",
@@ -921,13 +1129,14 @@
    ]
   },
   {
-   "id": "p035",
-   "page": 35,
-   "name": "شاي الأعشاب",
+   "id": "p044",
+   "page": 44,
    "ref": "200",
    "price": 286,
    "category": "weight",
-   "thumb": "p035.jpg",
+   "thumb": "p044.jpg",
+   "name": "شاي الأعشاب",
+   "name_fr": "Aloe Blossom Herbal Tea",
    "tags": [
     "اضطرابات الجهاز الهضمي",
     "الانتفاخ والغازات",
@@ -942,7 +1151,6 @@
     "الشقيقة",
     "التهابات المسالك البولية"
    ],
-   "name_fr": "Aloe Blossom Herbal Tea",
    "tags_fr": [
     "Troubles digestifs",
     "Ballonnements et gaz",
@@ -959,13 +1167,14 @@
    ]
   },
   {
-   "id": "p036",
-   "page": 36,
-   "name": "ثيرم",
+   "id": "p045",
+   "page": 45,
    "ref": "463",
    "price": 488,
    "category": "weight",
-   "thumb": "p036.jpg",
+   "thumb": "p045.jpg",
+   "name": "ثيرم",
+   "name_fr": "Forever Therm",
    "tags": [
     "خسارة الوزن",
     "بطء معدل الأيض",
@@ -979,7 +1188,6 @@
     "ضعف الأداء الرياضي أو البدني",
     "دهون الكرش"
    ],
-   "name_fr": "Forever Therm",
    "tags_fr": [
     "Perte de poids",
     "Métabolisme lent",
@@ -995,13 +1203,14 @@
    ]
   },
   {
-   "id": "p037",
-   "page": 37,
-   "name": "لين",
+   "id": "p046",
+   "page": 46,
    "ref": "289",
    "price": 511,
    "category": "weight",
-   "thumb": "p037.jpg",
+   "thumb": "p046.jpg",
+   "name": "لين",
+   "name_fr": "Forever Lean",
    "tags": [
     "فقذان الوزن",
     "السمنة",
@@ -1016,7 +1225,6 @@
     "اضطراب مستويات الكوليسترول",
     "صعوبة في الحفاظ على الوزن بعد الحمية"
    ],
-   "name_fr": "Forever Lean",
    "tags_fr": [
     "Perte de poids",
     "Obésité",
@@ -1033,13 +1241,13 @@
    ]
   },
   {
-   "id": "p038a",
-   "page": 38,
+   "id": "p047a",
+   "page": 47,
    "name": "باقة ديتوكس (Detox)",
    "ref": "475",
    "price": 1616,
    "category": "weight",
-   "thumb": "p038a.jpg",
+   "thumb": "p047a.jpg",
    "tags": [
     "إزالة السموم من الجسم",
     "بداية فقدان الوزن",
@@ -1072,13 +1280,13 @@
    ]
   },
   {
-   "id": "p038b",
-   "page": 38,
+   "id": "p047b",
+   "page": 47,
    "name": "باقة مانسور",
    "ref": "528",
    "price": 3733,
    "category": "weight",
-   "thumb": "p038b.jpg",
+   "thumb": "p047b.jpg",
    "tags": [
     "تسريع فقدان الوزن",
     "حرق الدهون المتراكمة",
@@ -1109,13 +1317,14 @@
    ]
   },
   {
-   "id": "p040",
-   "page": 40,
-   "name": "فوريفر برايت",
+   "id": "p049",
+   "page": 49,
    "ref": "28",
    "price": 125,
    "category": "beauty",
-   "thumb": "p040.jpg",
+   "thumb": "p049.jpg",
+   "name": "فوريفر برايت",
+   "name_fr": "Forever Bright Toothgel",
    "tags": [
     "التهاب اللثة - نزيف اللثة",
     "رائحة الفم الكريهة",
@@ -1130,7 +1339,6 @@
     "آلام الأسنان الخفيفة",
     "يحارب الجير"
    ],
-   "name_fr": "Forever Bright Toothgel",
    "tags_fr": [
     "Gingivite, saignement des gencives",
     "Mauvaise haleine",
@@ -1147,13 +1355,14 @@
    ]
   },
   {
-   "id": "p041",
-   "page": 41,
-   "name": "مزيل العرق",
+   "id": "p050",
+   "page": 50,
    "ref": "67",
    "price": 116,
    "category": "beauty",
-   "thumb": "p041.jpg",
+   "thumb": "p050.jpg",
+   "name": "مزيل العرق",
+   "name_fr": "Aloe Ever-Shield Déodorant",
    "tags": [
     "رائحة العرق الكريهة",
     "تهيج الجلد تحت الإبط",
@@ -1163,7 +1372,6 @@
     "الحساسية الإبط",
     "حماية من سرطانات الجلدية"
    ],
-   "name_fr": "Aloe Ever-Shield Déodorant",
    "tags_fr": [
     "Mauvaise odeur de transpiration",
     "Irritation sous les aisselles",
@@ -1175,13 +1383,14 @@
    ]
   },
   {
-   "id": "p042",
-   "page": 42,
-   "name": "ليبس",
+   "id": "p051",
+   "page": 51,
    "ref": "22",
    "price": 57,
    "category": "beauty",
-   "thumb": "p042.jpg",
+   "thumb": "p051.jpg",
+   "name": "ليبس",
+   "name_fr": "Forever Aloe Lips",
    "tags": [
     "تشقق الشفاه -جفاف الشفاه",
     "التهابات الشفاه - إزرقاق الشفاه",
@@ -1194,7 +1403,6 @@
     "الكدمات أو الجروح السطحية الصغيرة",
     "الهالات السوداء"
    ],
-   "name_fr": "Forever Aloe Lips",
    "tags_fr": [
     "Lèvres gercées et sèches",
     "Inflammation des lèvres, lèvres bleuies",
@@ -1209,13 +1417,14 @@
    ]
   },
   {
-   "id": "p043",
-   "page": 43,
-   "name": "صابون الأفوكادو",
+   "id": "p052",
+   "page": 52,
    "ref": "284",
    "price": 80,
    "category": "beauty",
-   "thumb": "p043.jpg",
+   "thumb": "p052.jpg",
+   "name": "صابون الأفوكادو",
+   "name_fr": "Savon à l'Avocat",
    "tags": [
     "جفاف البشرة - الحكة وتهيج الجلد",
     "حب الشباب - الإكزيما",
@@ -1227,7 +1436,6 @@
     "خشونة الكعبين أو المرفقين",
     "آثار الحلاقة أو إزالة الشعر"
    ],
-   "name_fr": "Savon à l'Avocat",
    "tags_fr": [
     "Peau sèche, démangeaisons et irritations",
     "Acné, eczéma",
@@ -1241,13 +1449,14 @@
    ]
   },
   {
-   "id": "p044",
-   "page": 44,
-   "name": "صابون الألوي السائل",
+   "id": "p053",
+   "page": 53,
    "ref": "633",
    "price": 255,
    "category": "beauty",
-   "thumb": "p044.jpg",
+   "thumb": "p053.jpg",
+   "name": "صابون الألوي السائل",
+   "name_fr": "Forever Aloe Liquid Soap",
    "tags": [
     "جفاف البشرة - تهيج البشرة",
     "التهابات الجلد الطفيفة",
@@ -1260,7 +1469,6 @@
     "الطفح الجلدي",
     "تقرحات بسيطة أو خدوش سطحية"
    ],
-   "name_fr": "Forever Aloe Liquid Soap",
    "tags_fr": [
     "Peau sèche et irritée",
     "Légères irritations cutanées",
@@ -1275,13 +1483,14 @@
    ]
   },
   {
-   "id": "p045",
-   "page": 45,
-   "name": "الو بودي واش",
+   "id": "p054",
+   "page": 54,
    "ref": "646",
    "price": 296,
    "category": "beauty",
-   "thumb": "p045.jpg",
+   "thumb": "p054.jpg",
+   "name": "الو بودي واش",
+   "name_fr": "Aloe Body Wash",
    "tags": [
     "جفاف البشرة",
     "التهابات الجلد الطفيفة",
@@ -1293,7 +1502,6 @@
     "حروق الشمس الطفيفة",
     "تقشر الجلد"
    ],
-   "name_fr": "Aloe Body Wash",
    "tags_fr": [
     "Peau sèche",
     "Légères irritations cutanées",
@@ -1307,13 +1515,14 @@
    ]
   },
   {
-   "id": "p046",
-   "page": 46,
-   "name": "شامبو الجوجوبا",
+   "id": "p055",
+   "page": 55,
    "ref": "640",
    "price": 287,
    "category": "beauty",
-   "thumb": "p046.jpg",
+   "thumb": "p055.jpg",
+   "name": "شامبو الجوجوبا",
+   "name_fr": "Aloe-Jojoba Shampooing",
    "tags": [
     "تساقط الشعر",
     "جفاف فروة الرأس",
@@ -1326,7 +1535,6 @@
     "الثعلبة (تونيا)",
     "القمل"
    ],
-   "name_fr": "Aloe-Jojoba Shampooing",
    "tags_fr": [
     "Chute de cheveux",
     "Cuir chevelu sec",
@@ -1341,13 +1549,14 @@
    ]
   },
   {
-   "id": "p047",
-   "page": 47,
-   "name": "بلسم الجوجوبا",
+   "id": "p056",
+   "page": 56,
    "ref": "641",
    "price": 307,
    "category": "beauty",
-   "thumb": "p047.jpg",
+   "thumb": "p056.jpg",
+   "name": "بلسم الجوجوبا",
+   "name_fr": "Aloe-Jojoba Après-shampooing",
    "tags": [
     "تساقط الشعر",
     "جفاف فروة الرأس",
@@ -1358,7 +1567,6 @@
     "ضعف بصيلات الشعر",
     "فقدان لمعان الشعر"
    ],
-   "name_fr": "Aloe-Jojoba Après-shampooing",
    "tags_fr": [
     "Chute de cheveux",
     "Cuir chevelu sec",
@@ -1371,13 +1579,14 @@
    ]
   },
   {
-   "id": "p048",
-   "page": 48,
-   "name": "Nourishing Hair Oil",
+   "id": "p057",
+   "page": 57,
    "ref": "642",
    "price": 369,
    "category": "beauty",
-   "thumb": "p048.jpg",
+   "thumb": "p057.jpg",
+   "name": "Nourishing Hair Oil",
+   "name_fr": "Nourishing Hair Oil",
    "tags": [
     "جفاف الشعر",
     "تقصف الأطراف",
@@ -1385,7 +1594,6 @@
     "فروة الرأس الجافة أو المتهيجة",
     "فقدان اللمعان والنعومة"
    ],
-   "name_fr": "Nourishing Hair Oil",
    "tags_fr": [
     "Cheveux secs",
     "Pointes fourchues",
@@ -1395,13 +1603,14 @@
    ]
   },
   {
-   "id": "p049",
-   "page": 49,
-   "name": "فيرست",
+   "id": "p058",
+   "page": 58,
    "ref": "40",
    "price": 322,
    "category": "beauty",
-   "thumb": "p049.jpg",
+   "thumb": "p058.jpg",
+   "name": "فيرست",
+   "name_fr": "Forever Aloe First",
    "tags": [
     "الحروق الخفيفة - تهيج الجلد",
     "التهابات الجلد - حروق الشمس",
@@ -1417,7 +1626,6 @@
     "تهيج الجلد الناتج عن الحساسية",
     "ماء الوضوء للنساء"
    ],
-   "name_fr": "Forever Aloe First",
    "tags_fr": [
     "Brûlures légères, irritation",
     "Irritations cutanées, coups de soleil",
@@ -1435,13 +1643,14 @@
    ]
   },
   {
-   "id": "p050",
-   "page": 50,
-   "name": "الوي جيلي",
+   "id": "p059",
+   "page": 59,
    "ref": "61",
    "price": 242,
    "category": "beauty",
-   "thumb": "p050.jpg",
+   "thumb": "p059.jpg",
+   "name": "الوي جيلي",
+   "name_fr": "Aloe Vera Gelly",
    "tags": [
     "الحروق و الجروح والخدوش",
     "التهابات الجلد",
@@ -1457,7 +1666,6 @@
     "تساقط الشعر",
     "الثعلبة (التونية)"
    ],
-   "name_fr": "Aloe Vera Gelly",
    "tags_fr": [
     "Brûlures, coupures et éraflures",
     "Irritations cutanées",
@@ -1475,13 +1683,14 @@
    ]
   },
   {
-   "id": "p051",
-   "page": 51,
-   "name": "بروبوليس كريم",
+   "id": "p060",
+   "page": 60,
    "ref": "51",
    "price": 322,
    "category": "beauty",
-   "thumb": "p051.jpg",
+   "thumb": "p060.jpg",
+   "name": "بروبوليس كريم",
+   "name_fr": "Aloe Propolis Creme",
    "tags": [
     "حب الشباب",
     "الجفاف الشديد في البشرة",
@@ -1498,7 +1707,6 @@
     "الشعر الجاف",
     "حبوب بعد الحلاقة"
    ],
-   "name_fr": "Aloe Propolis Creme",
    "tags_fr": [
     "Acné",
     "Peau très sèche",
@@ -1517,13 +1725,14 @@
    ]
   },
   {
-   "id": "p052",
-   "page": 52,
-   "name": "مستحلب الوجه بالألوة",
+   "id": "p061",
+   "page": 61,
    "ref": "63",
    "price": 242,
    "category": "beauty",
-   "thumb": "p052.jpg",
+   "thumb": "p061.jpg",
+   "name": "مستحلب الوجه بالألوة",
+   "name_fr": "Aloe Vera Face Wash",
    "tags": [
     "جفاف البشرة - تشقق الجلد",
     "تهيج الجلد",
@@ -1535,7 +1744,6 @@
     "حساسية البشرة من بعض المواد الكيميائية أو العوامل الجوية",
     "تكبير المناطق الأنثوية"
    ],
-   "name_fr": "Aloe Vera Face Wash",
    "tags_fr": [
     "Peau sèche, gerçures",
     "Irritation cutanée",
@@ -1549,13 +1757,14 @@
    ]
   },
   {
-   "id": "p053",
-   "page": 53,
-   "name": "الوي بودي لوشن",
+   "id": "p062",
+   "page": 62,
    "ref": "647",
    "price": 299,
    "category": "beauty",
-   "thumb": "p053.jpg",
+   "thumb": "p062.jpg",
+   "name": "الوي بودي لوشن",
+   "name_fr": "Aloe Body Lotion",
    "tags": [
     "جفاف الجلد",
     "تشققات البشرة",
@@ -1569,7 +1778,6 @@
     "تقشر الجلد",
     "تفزيرات البطن"
    ],
-   "name_fr": "Aloe Body Lotion",
    "tags_fr": [
     "Peau sèche",
     "Gerçures cutanées",
@@ -1585,13 +1793,14 @@
    ]
   },
   {
-   "id": "p054",
-   "page": 54,
-   "name": "الوي كولينغ لوشن",
+   "id": "p063",
+   "page": 63,
    "ref": "564",
    "price": 190,
    "category": "beauty",
-   "thumb": "p054.jpg",
+   "thumb": "p063.jpg",
+   "name": "الوي كولينغ لوشن",
+   "name_fr": "Aloe Cooling Lotion",
    "tags": [
     "الام من بعد تمارين الرياضية",
     "العمال أو الذين يقضون وقتا طويلا واقفين أو جالسين",
@@ -1600,7 +1809,6 @@
     "ألام المفاصل",
     "كل من يبحث عن تهدئة واستجمام بعد يوم شاق أو أثناء موجة حر"
    ],
-   "name_fr": "Aloe Cooling Lotion",
    "tags_fr": [
     "Douleurs après le sport",
     "Longues stations debout ou assises",
@@ -1611,13 +1819,14 @@
    ]
   },
   {
-   "id": "p055",
-   "page": 55,
-   "name": "ألوي هيت لوشن",
+   "id": "p064",
+   "page": 64,
    "ref": "64",
    "price": 242,
    "category": "beauty",
-   "thumb": "p055.jpg",
+   "thumb": "p064.jpg",
+   "name": "ألوي هيت لوشن",
+   "name_fr": "Aloe Heat Lotion",
    "tags": [
     "آلام العضلات و المفاصل",
     "التشنجات العضلية",
@@ -1635,7 +1844,6 @@
     "الزكام و السعال",
     "ضيق التنفس"
    ],
-   "name_fr": "Aloe Heat Lotion",
    "tags_fr": [
     "Douleurs musculaires et articulaires",
     "Crampes musculaires",
@@ -1655,13 +1863,14 @@
    ]
   },
   {
-   "id": "p056",
-   "page": 56,
-   "name": "ام اس ام",
+   "id": "p065",
+   "page": 65,
    "ref": "205",
    "price": 376,
    "category": "beauty",
-   "thumb": "p056.jpg",
+   "thumb": "p065.jpg",
+   "name": "ام اس ام",
+   "name_fr": "Forever MSM",
    "tags": [
     "آلام المفاصل",
     "التهابات المفاصل",
@@ -1677,7 +1886,6 @@
     "السياتيك",
     "البهاق و البرص"
    ],
-   "name_fr": "Forever MSM",
    "tags_fr": [
     "Douleurs articulaires",
     "Inflammations articulaires",
@@ -1695,13 +1903,14 @@
    ]
   },
   {
-   "id": "p057",
-   "page": 57,
-   "name": "جنتلمانس برايد",
+   "id": "p066",
+   "page": 66,
    "ref": "70",
    "price": 242,
    "category": "beauty",
-   "thumb": "p057.jpg",
+   "thumb": "p066.jpg",
+   "name": "جنتلمانس برايد",
+   "name_fr": "Gentleman's Pride",
    "tags": [
     "تهيج البشرة بعد الحلاقة",
     "الجروح والخدوش البسيطة",
@@ -1714,7 +1923,6 @@
     "تشققات البشرة",
     "تهيج الجلد الناتج عن التعرض للشمس"
    ],
-   "name_fr": "Gentleman's Pride",
    "tags_fr": [
     "Irritation après rasage",
     "Petites coupures/éraflures",
@@ -1729,13 +1937,14 @@
    ]
   },
   {
-   "id": "p058",
-   "page": 58,
-   "name": "مقشر الوجه",
+   "id": "p067",
+   "page": 67,
    "ref": "559",
    "price": 239,
    "category": "beauty",
-   "thumb": "p058.jpg",
+   "thumb": "p067.jpg",
+   "name": "مقشر الوجه",
+   "name_fr": "Gommage Visage",
    "tags": [
     "تقشير الجلد - انسداد المسام",
     "تراكم الخلايا الميتة على البشرة",
@@ -1750,7 +1959,6 @@
     "علامات التقدم في السن المبكرة",
     "التهابات الجلد السطحية الناتجة عن التراكمات الجلدية"
    ],
-   "name_fr": "Gommage Visage",
    "tags_fr": [
     "Exfoliation, pores obstrués",
     "Accumulation de peaux mortes",
@@ -1767,13 +1975,14 @@
    ]
   },
   {
-   "id": "p059",
-   "page": 59,
-   "name": "تونر",
+   "id": "p068",
+   "page": 68,
    "ref": "560",
    "price": 286,
    "category": "beauty",
-   "thumb": "p059.jpg",
+   "thumb": "p068.jpg",
+   "name": "تونر",
+   "name_fr": "Toner - Sonya",
    "tags": [
     "جفاف البشرة - تهيج البشرة",
     "احمرار البشرة",
@@ -1785,7 +1994,6 @@
     "حساسية البشرة تجاه العوامل البيئية",
     "ظهور علامات تقدم السن المبكرة على الجلد"
    ],
-   "name_fr": "Toner - Sonya",
    "tags_fr": [
     "Peau sèche et irritée",
     "Rougeurs cutanées",
@@ -1799,13 +2007,14 @@
    ]
   },
   {
-   "id": "p060",
-   "page": 60,
-   "name": "كريم محيط العينين",
+   "id": "p069",
+   "page": 69,
    "ref": "561",
    "price": 239,
    "category": "beauty",
-   "thumb": "p060.jpg",
+   "thumb": "p069.jpg",
+   "name": "كريم محيط العينين",
+   "name_fr": "Crème Contour des Yeux",
    "tags": [
     "الانتفاخ تحت العين",
     "الهالات السوداء",
@@ -1816,7 +2025,6 @@
     "علامات التقدم في السن",
     "بهتان البشرة حول العين"
    ],
-   "name_fr": "Crème Contour des Yeux",
    "tags_fr": [
     "Poches sous les yeux",
     "Cernes",
@@ -1829,13 +2037,14 @@
    ]
   },
   {
-   "id": "p061",
-   "page": 61,
-   "name": "أكتيفاتور",
+   "id": "p070",
+   "page": 70,
    "ref": "612",
    "price": 210,
    "category": "beauty",
-   "thumb": "p061.jpg",
+   "thumb": "p070.jpg",
+   "name": "أكتيفاتور",
+   "name_fr": "Activator",
    "tags": [
     "حب الشباب - التهابات البشرة",
     "الجروح والخدوش البسيطة",
@@ -1851,7 +2060,6 @@
     "التهاب اللوزتين",
     "انتفاخ تحت العين"
    ],
-   "name_fr": "Activator",
    "tags_fr": [
     "Acné, irritations cutanées",
     "Petites coupures/éraflures",
@@ -1869,13 +2077,14 @@
    ]
   },
   {
-   "id": "p062",
-   "page": 62,
-   "name": "ألو بيو سليلوز ماسك",
+   "id": "p071",
+   "page": 71,
    "ref": "1616",
    "price": 439,
    "category": "beauty",
-   "thumb": "p062.jpg",
+   "thumb": "p071.jpg",
+   "name": "ألو بيو سليلوز ماسك",
+   "name_fr": "Masque Bio-Cellulose à l'Aloe",
    "tags": [
     "الجفاف الشديد للبشرة",
     "التهيج والإحمرار",
@@ -1886,7 +2095,6 @@
     "البشرة المجهدة أو المتعبة",
     "تفاوت لون البشرة"
    ],
-   "name_fr": "Masque Bio-Cellulose à l'Aloe",
    "tags_fr": [
     "Peau très sèche",
     "Irritation et rougeurs",
@@ -1899,13 +2107,14 @@
    ]
   },
   {
-   "id": "p063",
-   "page": 63,
-   "name": "Deep Moisturizing Cream",
+   "id": "p072",
+   "page": 72,
    "ref": "651",
    "price": 442,
    "category": "beauty",
-   "thumb": "p063.jpg",
+   "thumb": "p072.jpg",
+   "name": "Deep Moisturizing Cream",
+   "name_fr": "Deep Moisturizing Cream",
    "tags": [
     "جفاف شديد في الجلد أو تشققات",
     "بشرة باهتة وتفتقر إلى النعومة والنضارة",
@@ -1914,7 +2123,6 @@
     "حساسية البشرة تجاه المنتجات الكيميائية القوية (لأنه غني بمكونات طبيعية)",
     "تغيرات في البشرة بسبب التغيرات المناخية أو استخدام مستحضرات غير مناسبة"
    ],
-   "name_fr": "Deep Moisturizing Cream",
    "tags_fr": [
     "Peau très sèche ou gercée",
     "Peau terne, manque de douceur",
@@ -1925,13 +2133,14 @@
    ]
   },
   {
-   "id": "p064",
-   "page": 64,
-   "name": "Replenishing Oil Skin",
+   "id": "p073",
+   "page": 73,
    "ref": "653",
    "price": 402,
    "category": "beauty",
-   "thumb": "p064.jpg",
+   "thumb": "p073.jpg",
+   "name": "Replenishing Oil Skin",
+   "name_fr": "Replenishing Skin Oil",
    "tags": [
     "البشرة الجافة أو الحساسة",
     "أولئك الباحثين عن ترطيب يومي عميق دون إثقال",
@@ -1941,7 +2150,6 @@
     "المتأثرين بالعوامل البيئية الضارة كالطاقة الشمسية والتلوث",
     "أي شخص يستخدم روتين مرطّب ويحتاج إلى تعزيز فعاليته"
    ],
-   "name_fr": "Replenishing Skin Oil",
    "tags_fr": [
     "Peau sèche ou sensible",
     "Hydratation quotidienne profonde et légère",
@@ -1953,13 +2161,14 @@
    ]
   },
   {
-   "id": "p065",
-   "page": 65,
-   "name": "سيروم مرطب",
+   "id": "p074",
+   "page": 74,
    "ref": "618",
    "price": 462,
    "category": "beauty",
-   "thumb": "p065.jpg",
+   "thumb": "p074.jpg",
+   "name": "سيروم مرطب",
+   "name_fr": "Sérum Hydratant",
    "tags": [
     "جفاف البشرة",
     "تهيج البشرة",
@@ -1970,7 +2179,6 @@
     "حساسية البشرة",
     "تلف البشرة الناتج عن العوامل البيئية"
    ],
-   "name_fr": "Sérum Hydratant",
    "tags_fr": [
     "Peau sèche",
     "Irritation cutanée",
@@ -1983,19 +2191,19 @@
    ]
   },
   {
-   "id": "p066",
-   "page": 66,
-   "name": "لوجيك جل نطوايون",
+   "id": "p075",
+   "page": 75,
    "ref": "667",
    "price": 346,
    "category": "beauty",
-   "thumb": "p066.jpg",
+   "thumb": "p075.jpg",
+   "name": "لوجيك جل نطوايون",
+   "name_fr": "Logic Gel Nettoyant",
    "tags": [
     "حب الشباب أو الرؤوس السوداء (لأنه ينظف المسام بلطف)",
     "البشرة الباهتة والمتعبة",
     "الجفاف أو التهيج الخفيف"
    ],
-   "name_fr": "Logic Gel Nettoyant",
    "tags_fr": [
     "Acné ou points noirs",
     "Peau terne et fatiguée",
@@ -2003,13 +2211,14 @@
    ]
   },
   {
-   "id": "p067",
-   "page": 67,
-   "name": "جوهر التونر",
+   "id": "p076",
+   "page": 76,
    "ref": "668",
    "price": 333,
    "category": "beauty",
-   "thumb": "p067.jpg",
+   "thumb": "p076.jpg",
+   "name": "جوهر التونر",
+   "name_fr": "Essence Toner",
    "tags": [
     "جفاف البشرة أو فقدان الترطيب",
     "الحساسية أو التهيّج الخفيف (لأنه يحتوي على ألوة فيرا وخيار مهدّئ)",
@@ -2017,7 +2226,6 @@
     "علامات التعب أو بداية التجاعيد (بفضل الشاي الأخضر ومضادات الأكسدة)",
     "عدم توازن البشرة (دهون/ جفاف)"
    ],
-   "name_fr": "Essence Toner",
    "tags_fr": [
     "Peau sèche, manque d'hydratation",
     "Légère sensibilité ou irritation",
@@ -2027,13 +2235,14 @@
    ]
   },
   {
-   "id": "p068",
-   "page": 68,
-   "name": "جل مرطب",
+   "id": "p077",
+   "page": 77,
    "ref": "669",
    "price": 367,
    "category": "beauty",
-   "thumb": "p068.jpg",
+   "thumb": "p077.jpg",
+   "name": "جل مرطب",
+   "name_fr": "Gel Hydratant",
    "tags": [
     "جفاف البشرة",
     "حساسية تجاه المنظفات القاسية",
@@ -2041,7 +2250,6 @@
     "بشرة متعبة وعلامات أولية للشيخوخة",
     "شعور بالشد أو عدم الراحة بعد الغسيل"
    ],
-   "name_fr": "Gel Hydratant",
    "tags_fr": [
     "Peau sèche",
     "Sensibilité aux nettoyants agressifs",
@@ -2051,13 +2259,14 @@
    ]
   },
   {
-   "id": "p069",
-   "page": 69,
-   "name": "Forever Vitamin C™",
+   "id": "p078",
+   "page": 78,
    "ref": "686",
    "price": 750,
    "category": "beauty",
-   "thumb": "p069.jpg",
+   "thumb": "p078.jpg",
+   "name": "Forever Vitamin C™",
+   "name_fr": "Forever Vitamin C™",
    "tags": [
     "البشرة الباهتة أو غير المتجانسة اللون",
     "علامات التعب أو الإشراق المنخفض",
@@ -2065,7 +2274,6 @@
     "التقدم في سن البشرة وظهور أولى الخطوط الدقيقة",
     "من يريدون تحسين توهج البشرة بشكل عام"
    ],
-   "name_fr": "Forever Vitamin C™",
    "tags_fr": [
     "Teint terne ou irrégulier",
     "Signes de fatigue, manque d'éclat",
@@ -2075,13 +2283,14 @@
    ]
   },
   {
-   "id": "p070",
-   "page": 70,
-   "name": "Forever Bakuchiol™",
+   "id": "p079",
+   "page": 79,
    "ref": "687",
    "price": 750,
    "category": "beauty",
-   "thumb": "p070.jpg",
+   "thumb": "p079.jpg",
+   "name": "Forever Bakuchiol™",
+   "name_fr": "Forever Bakuchiol™",
    "tags": [
     "علامات التقدم في السن (الخطوط الدقيقة والتجاعيد)",
     "ترهُّل خفيف في البشرة",
@@ -2089,7 +2298,6 @@
     "ملمس غير ناعم للبشرة",
     "بشرة حساسة أو مضطربة (لأنه بديل لطيف للريتينول)"
    ],
-   "name_fr": "Forever Bakuchiol™",
    "tags_fr": [
     "Signes de l'âge (rides et ridules)",
     "Léger relâchement cutané",
@@ -2099,116 +2307,13 @@
    ]
   },
   {
-   "id": "p072a",
-   "page": 72,
-   "name": "باقة سونيا للعناية اليومية",
-   "ref": "609",
-   "price": 1123,
-   "category": "sonya",
-   "thumb": "p072a.jpg",
-   "tags": [
-    "العناية اليومية بالبشرة",
-    "ترطيب وإشراقة البشرة"
-   ],
-   "bundle": true,
-   "contents": [
-    "جل التنظيف",
-    "جل الاشراقة",
-    "قناع الجل",
-    "جل ترطيب"
-   ],
-   "name_fr": "Pack Sonya - Soin Quotidien",
-   "tags_fr": [
-    "Soin quotidien de la peau",
-    "Hydratation et éclat"
-   ],
-   "contents_fr": [
-    "Gel Nettoyant",
-    "Gel Illuminateur",
-    "Masque Gel",
-    "Gel Hydratant"
-   ]
-  },
-  {
-   "id": "p072b",
-   "page": 72,
-   "name": "جل التنظيف - سونيا",
-   "ref": "",
-   "price": 310,
-   "category": "sonya",
-   "thumb": "p072a.jpg",
-   "tags": [
-    "تنظيف البشرة",
-    "الانتعاش الليلي للبشرة"
-   ],
-   "name_fr": "Gel Nettoyant - Sonya",
-   "tags_fr": [
-    "Nettoyage de la peau",
-    "Fraîcheur nocturne"
-   ]
-  },
-  {
-   "id": "p072c",
-   "page": 72,
-   "name": "جل الاشراقة - سونيا",
-   "ref": "",
-   "price": 293,
-   "category": "sonya",
-   "thumb": "p072a.jpg",
-   "tags": [
-    "إشراقة البشرة",
-    "محو العيوب"
-   ],
-   "name_fr": "Gel Illuminateur - Sonya",
-   "tags_fr": [
-    "Éclat de la peau",
-    "Estompe les imperfections"
-   ]
-  },
-  {
-   "id": "p072d",
-   "page": 72,
-   "name": "قناع الجل - سونيا",
-   "ref": "",
-   "price": 310,
-   "category": "sonya",
-   "thumb": "p072a.jpg",
-   "tags": [
-    "ترطيب البشرة",
-    "انتعاش ليلي"
-   ],
-   "name_fr": "Masque Gel - Sonya",
-   "tags_fr": [
-    "Hydratation de la peau",
-    "Fraîcheur nocturne"
-   ]
-  },
-  {
-   "id": "p072e",
-   "page": 72,
-   "name": "جل ترطيب - سونيا",
-   "ref": "",
-   "price": 339,
-   "category": "sonya",
-   "thumb": "p072a.jpg",
-   "tags": [
-    "ترطيب عميق للبشرة",
-    "نعومة البشرة"
-   ],
-   "name_fr": "Gel Hydratant - Sonya",
-   "tags_fr": [
-    "Hydratation profonde",
-    "Douceur de la peau"
-   ]
-  },
-  {
-   "id": "p074a",
-   "page": 74,
+   "id": "p081a",
+   "page": 81,
    "name": "باقة انفينيتي (Infinite)",
    "ref": "553",
    "price": 2301,
    "category": "infinite",
-   "thumb": "p074a.jpg",
+   "thumb": "p081a.jpg",
    "tags": [
     "مضاد للشيخوخة",
     "علامات التقدم في السن",
@@ -2235,13 +2340,13 @@
    ]
   },
   {
-   "id": "p074b",
-   "page": 74,
+   "id": "p081b",
+   "page": 81,
    "name": "مزيل مكياج مرطب - انفينيتي",
    "ref": "",
    "price": 332,
    "category": "infinite",
-   "thumb": "p074a.jpg",
+   "thumb": "p081a.jpg",
    "tags": [
     "إزالة المكياج",
     "تنظيف وترطيب البشرة"
@@ -2253,13 +2358,13 @@
    ]
   },
   {
-   "id": "p074c",
-   "page": 74,
+   "id": "p081c",
+   "page": 81,
    "name": "سيروم الثبات - انفينيتي",
    "ref": "",
    "price": 658,
    "category": "infinite",
-   "thumb": "p074a.jpg",
+   "thumb": "p081a.jpg",
    "tags": [
     "محاربة علامات التقدم في العمر",
     "شد البشرة"
@@ -2271,13 +2376,13 @@
    ]
   },
   {
-   "id": "p074d",
-   "page": 74,
+   "id": "p081d",
+   "page": 81,
    "name": "مكمل غذائي (Firming Complex) - انفينيتي",
    "ref": "",
    "price": 654,
    "category": "infinite",
-   "thumb": "p074a.jpg",
+   "thumb": "p081a.jpg",
    "tags": [
     "محاربة علامات الشيخوخة من الداخل",
     "ترطيب الجلد"
@@ -2289,13 +2394,13 @@
    ]
   },
   {
-   "id": "p074e",
-   "page": 74,
+   "id": "p081e",
+   "page": 81,
    "name": "كريم مرمم - انفينيتي",
    "ref": "",
    "price": 773,
    "category": "infinite",
-   "thumb": "p074a.jpg",
+   "thumb": "p081a.jpg",
    "tags": [
     "ترميم البشرة",
     "استعادة الشباب والمرونة"
@@ -2307,13 +2412,13 @@
    ]
   },
   {
-   "id": "p076a",
-   "page": 76,
+   "id": "p083a",
+   "page": 83,
    "name": "فوريفر مالوسي - عطر رجالي",
    "ref": "644",
    "price": 446,
    "category": "perfume",
-   "thumb": "p076a.jpg",
+   "thumb": "p083a.jpg",
    "tags": [
     "عطر رجالي",
     "للاستخدام اليومي والمناسبات"
@@ -2325,13 +2430,13 @@
    ]
   },
   {
-   "id": "p076b",
-   "page": 76,
+   "id": "p083b",
+   "page": 83,
    "name": "فوريفر ألوفا - عطر نسائي",
    "ref": "643",
    "price": 446,
    "category": "perfume",
-   "thumb": "p076b.jpg",
+   "thumb": "p083b.jpg",
    "tags": [
     "عطر نسائي",
     "رائحة زهرية دافئة"
@@ -2343,19 +2448,19 @@
    ]
   },
   {
-   "id": "p078",
-   "page": 78,
-   "name": "فوريفر فريدوم",
+   "id": "p085",
+   "page": 85,
    "ref": "196",
    "price": 581,
    "category": "abroad",
-   "thumb": "p078.jpg",
+   "thumb": "p085.jpg",
+   "name": "فوريفر فريدوم",
+   "name_fr": "Forever Freedom",
    "tags": [
     "ألم المفاصل",
     "السياتيك",
     "مشاكل العظام"
    ],
-   "name_fr": "Forever Freedom",
    "tags_fr": [
     "Douleurs articulaires",
     "Sciatique",
@@ -2363,19 +2468,19 @@
    ]
   },
   {
-   "id": "p079",
-   "page": 79,
-   "name": "عسل نحل طبيعي 100%",
+   "id": "p086",
+   "page": 86,
    "ref": "207",
    "price": 270,
    "category": "abroad",
-   "thumb": "p079.jpg",
+   "thumb": "p086.jpg",
+   "name": "عسل نحل طبيعي 100%",
+   "name_fr": "Miel d'Abeille 100% Naturel",
    "tags": [
     "من يبحثون عن بديل طبيعي للسكر المكرر في المشروبات أو الأطعمة",
     "من يحتاجون إلى مصدر طبيعي للطاقة والنشاط اليومي",
     "من يرغبون بدعم عام لجهاز المناعة بشكل طبيعي"
    ],
-   "name_fr": "Miel d'Abeille 100% Naturel",
    "tags_fr": [
     "Alternative naturelle au sucre raffiné",
     "Source naturelle d'énergie",
@@ -2383,20 +2488,20 @@
    ]
   },
   {
-   "id": "p080",
-   "page": 80,
-   "name": "Fab X Forever Active Boost",
+   "id": "p087",
+   "page": 87,
    "ref": "822",
    "price": 46,
    "category": "abroad",
-   "thumb": "p080.jpg",
+   "thumb": "p087.jpg",
+   "name": "Fab X Forever Active Boost",
+   "name_fr": "Fab X Forever Active Boost",
    "tags": [
     "الشعور بالتعب والارهاق العام",
     "انخفاض مستويات الطاقة خلال اليوم",
     "الحاجة إلى زيادة اليقظة والتركيز لفترات مؤقتة",
     "الرياضيين أو من يمارس نشاطات بدنية معتدلة (كعصير طاقة مساند)"
    ],
-   "name_fr": "Fab X Forever Active Boost",
    "tags_fr": [
     "Fatigue générale",
     "Baisse d'énergie durant la journée",
@@ -2405,20 +2510,20 @@
    ]
   },
   {
-   "id": "p081",
-   "page": 81,
-   "name": "FAB Forever Active Boost",
+   "id": "p088",
+   "page": 88,
    "ref": "821",
    "price": 46,
    "category": "abroad",
-   "thumb": "p081.jpg",
+   "thumb": "p088.jpg",
+   "name": "FAB Forever Active Boost",
+   "name_fr": "FAB Forever Active Boost",
    "tags": [
     "الشعور بالتعب والارهاق العام",
     "انخفاض مستويات الطاقة خلال اليوم",
     "الحاجة إلى زيادة اليقظة والتركيز لفترات مؤقتة",
     "الرياضيين أو من يمارس نشاطات بدنية معتدلة (كعصير طاقة مساند)"
    ],
-   "name_fr": "FAB Forever Active Boost",
    "tags_fr": [
     "Fatigue générale",
     "Baisse d'énergie durant la journée",
@@ -2427,53 +2532,14 @@
    ]
   },
   {
-   "id": "p082",
-   "page": 82,
-   "name": "أبسوربنت - د",
-   "ref": "672",
-   "price": 250,
-   "category": "abroad",
-   "thumb": "p082.jpg",
-   "tags": [
-    "الأشخاص الذين يعانون من نقص فيتامين D نظرا لصعوبة الحصول على كميات كافية من النظام الغذائي أو التعرض الكافي للشمس",
-    "آلام العضلات والمفاصل",
-    "الشقيقة",
-    "التعب والإرهاق المستمر",
-    "آلام في العظام",
-    "ضعف العضلات",
-    "تأخر التئام الجروح",
-    "العدوى المتكررة (مثل نزلات البرد)",
-    "الاكتئاب أو تقلبات المزاج",
-    "تساقط الشعر",
-    "مشاكل في النوم أو الأرق",
-    "هشاشة أو لين العظام",
-    "تقوس الساقين أو تأخر النمو عند الأطفال"
-   ],
-   "name_fr": "Forever Absorbent-D",
-   "tags_fr": [
-    "Carence en vitamine D",
-    "Douleurs musculaires et articulaires",
-    "Migraine",
-    "Fatigue persistante",
-    "Douleurs osseuses",
-    "Faiblesse musculaire",
-    "Cicatrisation lente",
-    "Infections fréquentes (rhumes)",
-    "Dépression ou sautes d'humeur",
-    "Chute de cheveux",
-    "Troubles du sommeil, insomnie",
-    "Ostéoporose ou ramollissement osseux",
-    "Jambes arquées ou retard de croissance chez l'enfant"
-   ]
-  },
-  {
-   "id": "p083",
-   "page": 83,
-   "name": "FOREVER ACTIVE HA",
+   "id": "p089",
+   "page": 89,
    "ref": "264",
    "price": 440,
    "category": "abroad",
-   "thumb": "p083.jpg",
+   "thumb": "p089.jpg",
+   "name": "FOREVER ACTIVE HA",
+   "name_fr": "Forever Active HA",
    "tags": [
     "إحساس بصعوبة أو تيبّس بالمفاصل",
     "خشونة المفاصل",
@@ -2482,7 +2548,6 @@
     "كبار السن الذين يقل لديهم حمض الهيالورونيك طبيعيًا",
     "من يرغب في دعم ترطيب البشرة ومرونتها (ثانويًا)"
    ],
-   "name_fr": "Forever Active HA",
    "tags_fr": [
     "Raideur articulaire",
     "Arthrose",
@@ -2493,13 +2558,60 @@
    ]
   },
   {
-   "id": "p084",
-   "page": 84,
-   "name": "ميلتيماكا",
+   "id": "p090",
+   "page": 90,
+   "ref": "188",
+   "price": 295,
+   "category": "abroad",
+   "thumb": "p090.jpg",
+   "name": "FOREVER B12 PLUS",
+   "name_fr": "Forever B12 Plus",
+   "tags": [
+    "نقص فيتامين B12 .",
+    "الإرهاق والتعب .",
+    "النباتيين أو الأشخاص الذين يستهلكون القليل من المنتجات الحيوانية.",
+    "كبار السن الذين قد تنخفض لديهم قدرة امتصاص B12.",
+    "الأشخاص الذين يحتاجون إلى دعم تكوين الدم أو لديهم نقص في حمض الفوليك."
+   ],
+   "tags_fr": [
+    "Carence en vitamine B12",
+    "Épuisement et fatigue",
+    "Végétariens ou personnes consommant peu de produits d'origine animale",
+    "Personnes âgées dont la capacité d'absorption de la B12 peut diminuer",
+    "Personnes ayant besoin de soutenir la formation du sang ou en carence d'acide folique"
+   ]
+  },
+  {
+   "id": "p091",
+   "page": 91,
+   "ref": "72",
+   "price": 520,
+   "category": "abroad",
+   "thumb": "p091.jpg",
+   "name": "FOREVER LYCIUM PLUS",
+   "name_fr": "Forever Lycium Plus",
+   "tags": [
+    "الإجهاد والتعب الناتج عن نمط حياة مرهق.",
+    "الراغبين في زيادة استهلاك مضادات الأكسدة.",
+    "الأشخاص المهتمين بصحة البشرة والعينين.",
+    "من يبحثون عن دعم عام للحيوية والنشاط."
+   ],
+   "tags_fr": [
+    "Stress et fatigue liés à un rythme de vie éprouvant",
+    "Personnes souhaitant augmenter leur apport en antioxydants",
+    "Personnes soucieuses de la santé de la peau et des yeux",
+    "Personnes cherchant un soutien général de la vitalité et de l'énergie"
+   ]
+  },
+  {
+   "id": "p092",
+   "page": 92,
    "ref": "215",
    "price": 500,
    "category": "abroad",
-   "thumb": "p084.jpg",
+   "thumb": "p092.jpg",
+   "name": "ميلتيماكا",
+   "name_fr": "Forever Multi-Maca",
    "tags": [
     "الضعف الجنسي",
     "سرعة القذف",
@@ -2511,7 +2623,6 @@
     "تراجع الأداء البدني أو الرياضي",
     "المزاج المتقلب والتوتر المستمر"
    ],
-   "name_fr": "Forever Multi-Maca",
    "tags_fr": [
     "Faiblesse sexuelle",
     "Éjaculation précoce",
@@ -2525,19 +2636,19 @@
    ]
   },
   {
-   "id": "p085",
-   "page": 85,
-   "name": "كارسينيا +",
+   "id": "p093",
+   "page": 93,
    "ref": "71",
    "price": 500,
    "category": "abroad",
-   "thumb": "p085.jpg",
+   "thumb": "p093.jpg",
+   "name": "كارسينيا +",
+   "name_fr": "Forever Garcinia Plus",
    "tags": [
     "من لديهم رغبة في المساعدة على إدارة الوزن كجزء من برنامج صحي",
     "من يريدون تقليل الشهية أو الرغبة في الأكل الزائد",
     "من يسعون لدعم الأيض الطبيعي وتوازن السكر في الدم"
    ],
-   "name_fr": "Forever Garcinia Plus",
    "tags_fr": [
     "Aide à la gestion du poids",
     "Réduction de l'appétit",
@@ -2545,13 +2656,14 @@
    ]
   },
   {
-   "id": "p086",
-   "page": 86,
-   "name": "ALOE SCRUBE",
+   "id": "p094",
+   "page": 94,
    "ref": "238",
    "price": 260,
    "category": "abroad",
-   "thumb": "p086.jpg",
+   "thumb": "p094.jpg",
+   "name": "ALOE SCRUBE",
+   "name_fr": "Forever Aloe Scrub",
    "tags": [
     "البشرة الباهتة",
     "انسداد المسام",
@@ -2559,7 +2671,6 @@
     "الراغبين في تنظيف",
     "تقشير لطيف"
    ],
-   "name_fr": "Forever Aloe Scrub",
    "tags_fr": [
     "Peau terne",
     "Pores obstrués",

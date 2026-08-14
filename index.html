@@ -622,7 +622,10 @@ document.getElementById('langToggle').addEventListener('click', ()=>{
   }
 });
 
-fetch('data/catalog.json').then(r=>r.json()).then(data=>{
+// bump CATALOG_VERSION whenever data/catalog.json changes, so returning
+// visitors don't keep serving the previous catalogue out of their browser cache
+const CATALOG_VERSION = '2026-08';
+fetch(`data/catalog.json?v=${CATALOG_VERSION}`).then(r=>r.json()).then(data=>{
   CATALOG = data;
   buildSidebar();
   render();
