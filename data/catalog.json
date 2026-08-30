@@ -4,55 +4,55 @@
    "id": "new",
    "name": "منتجات جديدة",
    "name_fr": "Nouveaux produits",
-   "banner": "p004.jpg"
+   "banner": "cat_new.jpg"
   },
   {
    "id": "aloe",
    "name": "مشروبات الألوفيرا",
    "name_fr": "Boissons à l'Aloe Vera",
-   "banner": "p013.jpg"
+   "banner": "cat_aloe.jpg"
   },
   {
    "id": "bee",
    "name": "منتجات النحل",
    "name_fr": "Produits de la ruche",
-   "banner": "p021.jpg"
+   "banner": "cat_bee.jpg"
   },
   {
    "id": "nutrition",
    "name": "منتجات التغذية",
    "name_fr": "Compléments nutritionnels",
-   "banner": "p025.jpg"
+   "banner": "cat_nutrition.jpg"
   },
   {
    "id": "weight",
    "name": "منتجات الرياضة والتحكم في الوزن",
    "name_fr": "Sport et contrôle du poids",
-   "banner": "p041.jpg"
+   "banner": "cat_weight.jpg"
   },
   {
    "id": "beauty",
    "name": "العناية الشخصية والجمال",
    "name_fr": "Soins personnels et beauté",
-   "banner": "p048.jpg"
+   "banner": "cat_beauty.jpg"
   },
   {
    "id": "infinite",
    "name": "باقة انفينيتي",
    "name_fr": "Pack Infinite",
-   "banner": "p080.jpg"
+   "banner": "cat_infinite.jpg"
   },
   {
    "id": "perfume",
    "name": "عطور فوريفر",
    "name_fr": "Parfums Forever",
-   "banner": "p082.jpg"
+   "banner": "cat_perfume.jpg"
   },
   {
    "id": "abroad",
    "name": "منتجات متوفرة خارج المغرب",
    "name_fr": "Produits disponibles hors Maroc",
-   "banner": "p084.jpg"
+   "banner": "cat_abroad.jpg"
   }
  ],
  "items": [
