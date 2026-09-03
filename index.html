@@ -626,9 +626,8 @@ document.getElementById('langToggle').addEventListener('click', ()=>{
 // bump CATALOG_VERSION whenever data/catalog.json changes, so returning
 // visitors don't keep serving the previous catalogue out of their browser cache
 const CATALOG_VERSION = '2026-08';
-// image files keep the same names when their artwork is corrected or replaced, so
-// they need their own version tag or returning visitors keep serving the old ones
-// out of cache. Bump this whenever anything under img/ is regenerated.
+// hero banners keep the same filenames when the artwork is replaced, so they need
+// their own version tag or returning visitors keep serving the old images
 const HERO_VERSION = '4';
 fetch(`data/catalog.json?v=${CATALOG_VERSION}`).then(r=>r.json()).then(data=>{
   CATALOG = data;
@@ -731,7 +730,7 @@ function cardHtml(item){
     <div class="card" data-id="${item.id}">
       <div class="thumb">
         ${item.bundle ? `<span class="bundle-badge">${t('bundleBadge')}</span>` : ''}
-        <img loading="lazy" src="img/thumb/${item.thumb}?v=${HERO_VERSION}" alt="${L(item,'name')}">
+        <img loading="lazy" src="img/thumb/${item.thumb}" alt="${L(item,'name')}">
       </div>
       <div class="body">
         <div class="name">${L(item,'name')}</div>
@@ -849,7 +848,7 @@ function openModal(id){
     contentsBox.style.display='none';
   }
 
-  modalImg.src = `img/full/p${String(item.page).padStart(3,'0')}.jpg?v=${HERO_VERSION}`;
+  modalImg.src = `img/full/p${String(item.page).padStart(3,'0')}.jpg`;
   modalImg.alt = L(item,'name');
   modalImgWrap.classList.remove('zoomed');
 
