@@ -626,6 +626,9 @@ document.getElementById('langToggle').addEventListener('click', ()=>{
 // bump CATALOG_VERSION whenever data/catalog.json changes, so returning
 // visitors don't keep serving the previous catalogue out of their browser cache
 const CATALOG_VERSION = '2026-08';
+// hero banners keep the same filenames when the artwork is replaced, so they need
+// their own version tag or returning visitors keep serving the old images
+const HERO_VERSION = '3';
 fetch(`data/catalog.json?v=${CATALOG_VERSION}`).then(r=>r.json()).then(data=>{
   CATALOG = data;
   buildSidebar();
@@ -703,7 +706,7 @@ function render(){
     els.sectionTitle.textContent = cat ? LCat(cat) : '';
     els.categoryBanner.innerHTML = cat ? `
       <div class="category-banner">
-        <img src="img/hero/${cat.banner}" alt="${LCat(cat)}">
+        <img src="img/hero/${cat.banner}?v=${HERO_VERSION}" alt="${LCat(cat)}">
         <div class="cap"><span>${LCat(cat)}</span></div>
       </div>` : '';
   }
@@ -777,8 +780,8 @@ function renderHeroSlides(){
     }
     const cat = CATALOG.categories.find(c=>c.id===slide.id);
     return `<div class="hero-slide" data-i="${i}">
-      <div class="bg" style="background-image:url('img/hero/${cat.banner}')"></div>
-      <img src="img/hero/${cat.banner}" alt="${LCat(cat)}" loading="lazy">
+      <div class="bg" style="background-image:url('img/hero/${cat.banner}?v=${HERO_VERSION}')"></div>
+      <img src="img/hero/${cat.banner}?v=${HERO_VERSION}" alt="${LCat(cat)}" loading="lazy">
       <div class="cap"><span>${LCat(cat)}</span></div>
     </div>`;
   }).join('');
