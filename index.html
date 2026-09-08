@@ -349,6 +349,148 @@
   footer .badges-card img{height:44px; width:auto; max-width:100%; object-fit:contain}
   @media (max-width:760px){ footer .badges-card img{height:34px} }
   .copy{text-align:center; font-size:12px; color:#8fa79a; margin-top:20px}
+
+  /* ================================================================
+     Mobile refinements
+     Everything below only tightens the existing design for small
+     screens -- no rule here changes the desktop layout above.
+     ================================================================ */
+
+  /* A safety net for long unbreakable strings (product refs, URLs).
+     `clip` rather than `hidden` on purpose: `hidden` would turn <body>
+     into a scroll container and break the sticky header. */
+  body{overflow-x:clip}
+  /* grid and flex children default to min-width:auto, which is what lets a
+     child refuse to shrink and push the whole page sideways */
+  .layout, main, .grid, .card, .toolbar, .modal, .footer-inner{min-width:0}
+
+  /* larger hit area for the slider dots without changing how they look */
+  .hero-dots button{position:relative}
+  .hero-dots button::after{content:''; position:absolute; inset:-9px}
+
+  /* on touch screens the hover lift sticks after a tap */
+  @media (hover:none){
+    .card:hover{transform:none; box-shadow:none}
+  }
+
+  @media (max-width:900px){
+    .layout{padding:18px 14px 52px; gap:18px}
+    aside.sidebar{padding-bottom:calc(14px + env(safe-area-inset-bottom))}
+  }
+
+  @media (max-width:760px){
+    /* --- header ---------------------------------------------------
+       The search box used to sit in the same row as the brand and the
+       two buttons; below ~420px it could not shrink any further and it
+       was this that made the page scroll sideways. It now takes a row
+       of its own, which also gives it a usable tap target. */
+    .topbar-inner{flex-wrap:wrap; gap:8px; padding:10px 12px}
+    .brand{flex:1 1 auto; min-width:0; font-size:16px; gap:8px}
+    .brand .leaf{width:30px; height:30px; font-size:16px; border-radius:9px}
+    .brand small{font-size:10px}
+    .menu-btn{width:38px; height:38px; font-size:17px}
+    .lang-toggle{padding:8px 12px; font-size:12.5px}
+    .whatsapp-fab-inline{padding:9px 11px}
+    .search-wrap{order:9; flex:1 0 100%; max-width:none}
+    /* 16px keeps iOS from zooming the whole page when the field is focused */
+    .search-wrap input{font-size:16px; padding:11px 40px 11px 14px}
+    .search-wrap .icon{right:14px}
+
+    /* --- hero slider --- */
+    .hero-wrap{padding:0 12px; margin-top:12px}
+    .hero-slide .cap{padding:12px 14px}
+    .hero-arrow{width:32px; height:32px; font-size:15px}
+    .hero-arrow.prev{inset-inline-start:8px}
+    .hero-arrow.next{inset-inline-end:8px}
+    .hero-dots{bottom:9px; gap:5px}
+    .hero-dots button{width:7px; height:7px}
+    .hero-dots button.active{width:16px}
+
+    /* --- toolbar --- */
+    .layout{padding:14px 12px 48px; gap:16px}
+    .toolbar{gap:10px}
+    .toolbar h2{width:100%; font-size:17px}
+    .toolbar > div{width:100%; justify-content:space-between}
+    select#sortSelect{flex:1; min-width:0; font-size:16px; padding:10px 12px}
+
+    /* --- category banner --- */
+    .category-banner{height:104px; margin-bottom:12px}
+    .category-banner .cap{padding:12px}
+    .category-banner .cap span{font-size:17px}
+
+    /* --- product grid: the desktop minmax(168px,1fr) needed 350px for two
+           columns, so a 375px phone fell back to one full-width card. A
+           smaller track keeps three columns on a 600px tablet... --- */
+    .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px}
+    .card .body{padding:9px 10px 11px; gap:5px}
+    .card .name{font-size:12.5px}
+    .card .price{font-size:13.5px}
+    .card .ref{font-size:10px}
+    .card .bundle-badge{font-size:9.5px; padding:2px 7px; top:6px; right:6px}
+    .empty-state{padding:48px 16px}
+
+    /* --- modal --- */
+    .modal-backdrop{padding:10px}
+    .modal{border-radius:16px; max-height:94vh}
+    .modal-close{width:38px; height:38px}
+    /* the catalogue page is portrait, so give it real height instead of the
+       desktop min-height, which the stacked grid squashed to ~165px */
+    .modal-img{min-height:38vh; max-height:48vh}
+    .modal-info{padding:16px; gap:10px}
+    .modal-info h2{font-size:17px}
+    .modal-info .price-big{font-size:22px}
+    .modal-info .tag{font-size:11.5px; padding:4px 9px}
+    .modal-info .contents{font-size:12.5px; padding:10px 12px}
+    .modal-actions{margin-top:14px}
+    .btn{min-width:0; width:100%; padding:14px}
+    .hint{font-size:11px}
+
+    /* --- footer --- */
+    footer{padding:26px 14px calc(26px + env(safe-area-inset-bottom))}
+    .footer-inner{gap:20px}
+    footer p{font-size:13px; line-height:1.8}
+    /* the badges were sized by height, which left the strip ~115px wide and
+       unreadable on a phone; size it by width instead */
+    footer .badges-card{width:100%; padding:14px 16px}
+    footer .badges-card img{height:auto; width:100%; max-width:300px}
+    .copy{font-size:11.5px; margin-top:16px}
+
+    /* clear of the home indicator on notched phones */
+    .wa-float{bottom:calc(16px + env(safe-area-inset-bottom))}
+  }
+
+  /* ...and below this a phone is too narrow for auto-fill to reach two tracks,
+     so pin it to exactly two rather than let it collapse to one. */
+  @media (max-width:520px){
+    .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  }
+
+  /* Short viewports -- a phone held sideways. Without this the catalogue page
+     image alone is taller than the dialog, so the price and the order button
+     sit below a long scroll. */
+  @media (max-height:560px){
+    .modal{max-height:96vh}
+    .modal-img{min-height:0; max-height:96vh}
+    .modal-info{padding:14px; gap:8px}
+    .modal-info h2{font-size:16px}
+    .modal-info .price-big{font-size:20px}
+    .modal-actions{margin-top:10px}
+    .hero-arrow{width:30px; height:30px}
+  }
+
+  @media (max-width:400px){
+    .brand{font-size:15px}
+    .brand small{font-size:9.5px}
+    .lang-toggle{padding:8px 10px}
+    .hero-wrap{padding:0 10px}
+    .layout{padding:12px 10px 44px}
+    .grid{gap:8px}
+    .card .body{padding:8px 9px 10px}
+    .card .name{font-size:12px}
+    .card .price{font-size:13px}
+    .category-banner{height:92px}
+    .category-banner .cap span{font-size:15.5px}
+  }
 </style>
 </head>
 <body>
